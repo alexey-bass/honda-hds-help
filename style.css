@@ -1,0 +1,107 @@
+/*
+  Style's used by HDS for displaying Help screen
+  UPDATE 20110628:
+  - changed MARGIN-BOTTOM from -16 to 0. Overlapping occured on some pages
+*/
+
+P.mnemonic
+{
+    MARGIN-BOTTOM: 0px;
+    font: 8pt "Arial";
+    text-align: right
+}
+
+/* Background color: White (default), Font color: Black */
+/* UPDATE 20110614: removed justify, because it can cause strange line breaks */
+BODY
+{
+   color:black;
+   font-family:Arial;
+   /*text-align:justify;*/
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+H2
+{
+    font-size: 16pt; 
+    text-align:center
+}
+
+/* Mostly used in DTC's Heading, therefore alignment is centered */
+H3 
+{
+    font-size: 14pt; 
+    color:#074B7F;
+    text-align:center
+}
+
+/* All the paragraph's elements will inherit this style for left placement */
+p
+{
+    margin-left:1em;
+
+}
+
+/* 
+  All the images will be placed on left hand side and the text <p> elements will be placed on the next column. 
+  Any other consecutive image will be placed in the next row.
+UPDATE 20110609: Removed, because it resulted in images covering partly text and/or 
+        text, which was not right placed
+  
+img 
+{
+    float:left;
+    margin-left: .2em;
+    margin-right: .6em;
+    clear:left;
+}*/
+
+
+/* UPDATE 20110614: Added "ul" in front of "li" in order to activate bullet only for unordered lists*/
+/*  - Removed the "ul" styling and moved the contents to "li" styling
+    - Added a "ol li" styling only for numbered listings to remove the bullet for this type
+*/
+/* List style has been set as none, to provide custom style using <li> tag*/
+/*ul
+{
+    list-style-type: none;
+    padding: .1em;
+    margin-left: 2em;
+    text-align: left;
+}*/
+
+/* UPDATE 2012-03-02: ADMS KSh66
+   Set the positioning and no background image for ol li but don't change the style */
+ol li
+{
+  /* UPDATE 2012-03-02: ADMS KSh66
+     Removed list-style-type: decimal since it forces all ordered  list to be decimal even if specified as type="i"
+     Note that the correct way is to define appropriate classes and replace the type="i" in each <ol> with something
+     like class="lowerRoman"
+     However, this requires changes to all the affected htlm source. */
+  /* list-style-type: decimal; */
+  background-image: none;
+  padding-left: 0.5em;
+}
+
+/* Each list element (but now only when contained in <ul>) will have the GreenBullet image on the left
+   Note that illegal li elements not contained in a ul or ol element will revert to the default bullet rather than
+   using the GreenBullet in this rule */
+/* UPDATE 2011.06.29:
+  - background-position was set to 0.2em instead of 0 .2em*/
+/* UPDATE 2012-03-02: ADMS KSh66
+    Modified rule from li to ul li
+    Corrected url(..\images\GreenBullet.gif) to
+              url(../images/GreenBullet.gif) so displayed correctly */
+ul li
+{
+  list-style-type: none;
+  padding: .1em;
+  margin-left: 2em;
+  text-align: left;
+  background-image: url(../images/GreenBullet.gif);
+  background-repeat: no-repeat;
+  background-position: 0 .2em;
+  padding-left: 1.5em;
+}
