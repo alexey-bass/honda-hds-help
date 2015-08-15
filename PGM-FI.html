@@ -1,0 +1,1938 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="jquery.lazyload-1.9.5.min.js"></script>
+<script>
+$(function() {
+    $("img.lazy").lazyload();
+});
+</script>
+</head>
+<body>
+
+<p class="mnemonic">PARSP_274_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+TP SENSOR:<br>
+Absolute Throttle Position Sensor<br>
+(V) (%)<br>
+Unit Conversion Type: ANGLE</p>
+<p>This sensor indicates the absolute throttle opening value as calculated from 
+voltage input form TP sensor.</p>
+<p><br>
+OPERATING RANGE (IDLE)<br>
+(Fully closed)<br>
+4% - 14%<br>
+-0.2V - 0.7V</p>
+<p>(DBW)<br>
+4% - 20%<br>
+0.2V - 1.0V</p>
+
+<p class="mnemonic">PARSP_06_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+BARO SENSOR:<br>
+Barometric Pressure Sensor<br>
+(V)(kPa)(MPa)(kgf/cm<sup>2</sup>)(mmHg)(inHg)(psi)<br>
+(N/A : Not equipped)<br>
+Unit Conversion Type: PRESSURE</p>
+<p>The barometric pressure sensor is located inside the PCM. 
+The sensor detects barometric pressure and converts it into voltage. The signal is 
+used to correct injection time for changing altitude and atmospheric conditions. The voltage 
+becomes lower as atmospheric pressure decreases, and the voltage becomes higher 
+as atmospheric pressure increases. </p>
+<p></p>
+<p>There are two different sensors used, each having different voltage 
+characteristics. The most widely used is shown as Type A in the graph below. 
+It will typically read near 2.88 V at sea level. Type B was introduced on some 
+models in 2008. It will typically read near 4.08 V at sea level. </p>
+</p>
+<p><img border="0" class="lazy" data-original="Images/PARSP_06_01.gif" width="350" height="250"></p>
+<p></p>
+<p>i: Type B<br>
+ii: Type A<br>
+iii: Pressure at Sea Level<br>
+X: Barometric Pressure<br>
+Y: Sensor Input<br></p>
+<p>NOTE: At times you may be requested to compare the MAP and BARO sensors to 
+each other with the Key On Engine Off (KOEO). The voltage and pressure 
+values on a Type A BARO and a MAP sensor should read near each other. The 
+voltage value of a Type B BARO sensor will not read the same as the MAP 
+sensor. If you change the unit conversion from voltage to pressure, the 
+values should then be close to the same. </p>
+
+<p class="mnemonic">PARSP_82_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CLV:<br>
+Calculated Load Value<br>
+(%)</p>
+<p>Calculated load value refers to the current air flow divided by peak air flow.<br>
+It indicates the percentage of engine capacity being used.</p>
+<p>OPERATING RANGE (IDLE)<br>
+20% - 43%</p>
+
+<p class="mnemonic">PARSP_273_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MAF SENSOR:<br>
+Mass Air Flow Sensor<br>
+(V) (g/s)<br>
+Unit Conversion Type: AIR FLOW</p>
+<p>A sensor indicates the amount of air flowing into the engine.</p>
+
+<p class="mnemonic">PARSP_05_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MAP SENSOR:<br>
+Manifold Absolute Pressure Sensor<br>
+(V)(kPa)(MPa)(kgf/cm<sup>2</sup>)(mmHg)(inHg)(psi)<br>
+Unit Conversion Type: PRESSURE</p>
+<p>- The sensor detects the intake manifold pressure, converts it into the 
+voltage by the semiconductor, and sends it to the control unit. The signal is 
+used for determination of the basic injection time together with the engine 
+speed signal output from the crankshaft angle sensor.</p>
+<p>- The manifold absolute pressure sensor is installed between the throttle 
+valve of the throttle body and the intake manifold, and it detects the intake 
+manifold vacuum to calculate intake air amount.</p>
+<p>- The vacuum generated in the intake manifold is applied to the silicon 
+diaphragm (sensor element). The silicon diaphragm is an element that changes the 
+electric resistance value by the applied pressure. A voltage is pre-applied to 
+the electrode provided in the diaphragm, and current value changes according to 
+pressure change. This current change is converted into voltage change by the 
+amplifier, and the sensor signal is output.</p>
+<p>- The sensor signal operates the amplifier by the reference voltage (5V) 
+supplied from the VCC. The amplifier generates a signal based on this voltage, 
+and outputs it to the ECU.</p>
+<p>- The voltage becomes lower with larger intake manifold vacuum, and the 
+voltage becomes higher with smaller intake manifold vacuum. This change is in 
+proportion to the vacuum generated in the intake manifold.</p>
+<p>- With this vacuum signal, the computer calculates the amount of intake air 
+based on the engine speed and throttle position.</p>
+<p>- The manifold absolute pressure sensor detects the intake air density from 
+the throttle valve position and engine load status change (high/low) from the 
+intake air vacuum of the intake manifold.</p>
+<p>- The manifold absolute pressure sensor has the unit structure with an 
+amplifier, which is the amplifier circuit supplied the reference voltage from 
+the ECU. The sensor detects intake air vacuum by the pressure sensor, amplifies 
+it by the amplifier, and converts it into the signal voltage. The signal voltage 
+is low at vacuum side, and high at atmosphere pressure side.</p>
+<p>- Reference operating range (idle) 28kPa - 41kPa, 0.55V - 1.8V</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_05_01_01.gif" width="350" height="350"></p>
+<p>i: Amplifier<br>
+ii: Sensor element<br>
+iii: VCC<br>
+iv: SG<br>
+v: PB<br>
+vi: ECU<br>
+vii: Reference voltage circuit<br>
+viii: Computer</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_05_01_02.gif" width="350" height="350"></p>
+<p>Fig: Vacuum voltage characteristics<br>
+Y: V<br>
+X: mmhg<br>
+i: Atmosphere<br></p>
+<p>NOTE: At times you may be requested to compare the MAP and BARO sensors to 
+each other with the Key On Engine Off (KOEO). <br>
+Use parameter specification kPa for BARO SENSOR.</p>
+
+<p class="mnemonic">PARSP_04_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IAT SENSOR / IAT SENSOR 1:<br>
+Intake Air Temperature Sensor / Intake Air Temperature Sensor(1)<br>
+(°C) (°F) (V)<br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>- The intake air temperature sensor is installed on the intake manifold. The 
+sensor detects the intake air temperature change using the thermistor that 
+changes its resistance value according to the temperature, and converts it into 
+the signal voltage.</p>
+<p>- The structure and property of the resistance value are the same as those of 
+the engine coolant temperature sensor, however, the thermistor wall is thinner 
+and made of resin for better response.</p>
+<p>- Reference operating range (idle) 25°C - 90°C, 2.8V - 1.7V</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_04_01_01.gif" width="350" height="350"></p>
+<p>Fig: Temp. voltage characteristics<br>
+Y: V<br>
+X: °C</p>
+
+<p class="mnemonic">4R_FI_TW2_ECT2A</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ECT SENSOR 2 :<br>
+Engine Coolant Temperature Sensor 2<br>
+(°C) (°F) (V)<br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>This indicates the engine coolant temperature on the radiator side.<br>
+This ECT sensor is mounted to the radiator side for determining a stuck-closed 
+thermostat.</p>
+
+<p class="mnemonic">PARSP_03_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ECT SENSOR / ECT SENSOR 1 :<br>
+Engine Coolant Temperature Sensor / Engine Coolant Temperature Sensor 1<br>
+(°C) (°F) (V)<br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>- The sensor detects the coolant temperature change via resistance value 
+change of the thermistor, converts it into voltage, and sends it to the control 
+unit. With this signal (voltage), the basic injection time is corrected 
+according to the coolant temperature. The resistance value of the thermistor 
+becomes higher with lower coolant temperature, and the value becomes lower with 
+higher temperature.</p>
+<p>- The engine coolant temperature sensor is a thermistor sensor installed to 
+the block, and it detects engine coolant temperature.</p>
+<p>- The thermistor changes its resistance value according to the temperature, 
+and the resistance value change is in proportion to the temperature. Therefore, 
+the thermistor is placed into the coolant, and the sensor detects the resistance 
+value change and converts it to coolant temperature change.</p>
+<p>- The resistance value change for the temperature (temperature resistance 
+characteristics) is as shown in the figure. When the thermistor detects lower 
+temperature, the resistance value becomes higher, and it detects higher 
+temperature, the value becomes lower.</p>
+<p>- The thermistor detects the resistance value as temperature, and the 
+computer cannot detect the resistance value. Therefore, the value needs to be 
+converted into the voltage value which can be detected by the computer.</p>
+<p>- To convert into the voltage value, the voltage of 5V is output by the 
+reference voltage circuit in the ECU, and applied it to the thermostat. The 
+thermostat has a circuit that consumes a certain voltage out of the 5V depending 
+on the resistance value, and current values in the circuit change resulting in 
+voltage change.</p>
+<p>- The voltage becomes higher (5V), as the temperature becomes lower, and it 
+becomes lower, as the temperature becomes higher. Because this voltage change is 
+in proportion to the resistance change, the temperature can be detected by the 
+computer.</p>
+<p>- The engine coolant temperature sensor is installed on the cylinder block, 
+and it detects engine coolant temperature change. The engine coolant temperature 
+sensor uses the thermostat that changes its resistance value according to the 
+temperature. The resistance value becomes higher with lower coolant temperature, 
+and it becomes lower with higher temperature. The signal voltage is output based 
+on the resistance value change of the thermostat.</p>
+<p>- Reference operating range (idle) 70°C- 100°C, 1.0V - 0.4V</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_03_01_01.gif" width="350" height="350"></p>
+<p>Fig: Temp. resistance characteristics<br>
+Y: kΩ<br>
+X: °C</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_03_01_02.gif" width="350" height="350"></p>
+<p>i: Sensor<br>
+ii: TW<br>
+iii: SG<br>
+iv: ECU<br>
+v: Reference voltage circuit<br>
+vi: Computer</p>
+
+<p class="mnemonic">PARSP_02_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+VEHICLE SPEED:<br>
+Vehicle Speed<br>
+(km/h) (MPH)<br>
+Unit Conversion Type: VEHICLE SPEED</p>
+<p>The vehicle speed (km/h) is converted by ECU from the pulse signal sent from 
+the vehicle speed sensor for display. When the drive wheel speed is 2km/h or 
+higher, the ECU controls various functions using the wheel speed information. 
+Examples)<br>
+ON/OFF control of V TEC system Fuel-cut control at high speed driving Control of 
+air fuel ratio correction during driving.</p>
+<p>- The vehicle speed sensor is also used for the speedometer. The pulse signal 
+is output from the sensor based on the vehicle speed, and the vehicle speed 
+(km/h) is calculated from the number of pulses within the specified time.</p>
+<p>- The vehicle speed sensor system detects the differential gear rotation by 
+the magnet integrated in the rotor and Hall element installed outside of the 
+magnet. When voltage is applied to the Hall element and magnetic flux is 
+changed, Hall voltage is output based on the magnetic flux change. Because the 
+Hall voltage changes in four cycles during one rotor rotation, the waveform 
+creation circuit outputs four-pulse signal.</p>
+<p>- When the vehicle speed becomes higher, number of the vehicle speed signal 
+pulse within the specified time increases, and voltage is output with 
+approximately 7pulses/s at 10km/h, and 707pulses /s at 100km/h.</p>
+<p>- The signal voltage output from the vehicle speed sensor is a pulse signal, 
+and voltage of 0V and 5V is output alternately. When the vehicle speed sensor 
+signal is OF, the voltage (5V) output from reference circuit of the computer in 
+the ECU flows to the vehicle speed sensor and becomes 0V, and when the vehicle 
+speed sensor signal is ON, the reference voltage becomes 5V at the same 
+potential.</p>
+<p>- The computer detects the vehicle speed signal based on ON/OFF switching of 
+the reference voltage which is made by ON/OFF switching of the vehicle speed 
+sensor. - The vehicle sensor detects the vehicle speed change based on final 
+gear rotation speed on the transmission.</p>
+<p>- The vehicle speed sensor has a magnetic sensing element and detects 
+magnetic flux change. This change is amplified and converted into Hi and Lo 
+voltage signals. The magnetic flux changes depending on the rotation speed of 
+the magnetic rotor installed on rotation area of the final gear.</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_02_01_01.gif" width="350" height="350"></p>
+<p>i: Magnet<br>
+ii: Hall element<br>
+iii: Waveform creation circuit<br>
+iv: Vehicle speed signal output</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_02_01_02.gif" width="350" height="350"></p>
+<p>Fig: Output waveform of vehicle speed signal<br>
+Y: V<br>
+X: Time</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_02_01_03.gif" width="350" height="350"></p>
+<p>Fig: Vehicle speed sensor (Training text III)<br>
+i: IG<br>
+ii: Vehicle speed sensor<br>
+iii: VSP<br>
+iv: ECU<br>
+v: Reference voltage circuit<br>
+vi: Computer<br>
+vii: SG</p>
+
+<p class="mnemonic">PARSP_01_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ENGINE SPEED:<br>
+Engine Speed<br>
+(RPM)</p>
+<p>Engine speed is converted from CKP sensor.</p>
+
+<p class="mnemonic">PARSP_295_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+AF SENSOR:<br>
+A/F Sensor<br>
+(mA)</p>
+<p>A sensor that detects the amount of oxygen content in the exhaust gases.</p>
+
+<p class="mnemonic">4R_FI_RDBWRLY</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+THROTTLE ACTUATOR SUPPLY VOLTAGE :<br>
+Throttle Actuator Supply Voltage<br>
+(OFF/ON)</p>
+<p>This indicates ON when TACM(Throttle Actuator Control Module) relay applied.</p>
+
+<p class="mnemonic">PARSP_286_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+TACM RELAY:<br>
+Throttle Actuator Control Module Relay<br>
+(ON/OFF)</p>
+<p>This relay is controlled by the ECM and supplies power to the TAC module.</p>
+<p>It indicates ON when the ECM turns ON.</p>
+
+<p class="mnemonic">PARSP_283_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CRUS REQ TH:<br>
+Requested Throttle valve Position by Cruise Control Module<br>
+(°)</p>
+<p>This indicates the throttle position requested by the cruise control.</p>
+
+<p class="mnemonic">PARSP_284_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MOTOR DUTY:<br>
+Motor Output Duty<br>
+(%)</p>
+<p>Output duty of motor controlled by TACM(Throttle Actuator Control Module).</p>
+
+<p class="mnemonic">PARSP_279_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+TP SENSOR-B:<br>
+Throttle Position Sensor B<br>
+(V)</p>
+<p>This sensor is a supplemental sensor.<br>
+The ECM/PCM compares the voltage from throttle position sensor A and throttle 
+position sensor B to detect failures.</p>
+
+<p class="mnemonic">PARSP_278_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+TP SENSOR-A:<br>
+Throttle Position Sensor A<br>
+(V)</p>
+<p>A potentiometer connected to the throttle valve shaft.<br>
+It indicates the actual voltage on the TP sensor A.</p>
+
+<p class="mnemonic">PARSP_280_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IDLE TARGET TH:<br>
+Target Throttle Valve Position at Idle<br>
+(°)</p>
+<p>This indicates the target angle based on engine rotation and the amount of air 
+flow.</p>
+
+<p class="mnemonic">PARSP_277_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+TARGET TH VLV:<br>
+Target Throttle Valve Position (ETCS)<br>
+(°)</p>
+<p>The ECM calculates the target angle from the accelerator position sensor input 
+and the driving conditions.</p>
+
+<p class="mnemonic">PARSP_276_01_OBS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+THROTTLE VLV :<br>
+Throttle Valve <br>
+(deg)<br>
+<p></p>
+<p><br>
+Valid data range & sampling interval<br>
+This On Board Snapshot parameter is available only following range and sampling interval.<br>
+-10 to 0 (sec): 0.1 sec sampling</p>
+<p>Regards to On-Board Snapshot after 12MY, both the value outside of the recording length and the value between recording points shall be shown as "***".</p>
+
+<p class="mnemonic">PARSP_289_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+APP SENSOR-B:<br>
+Acceleration Pedal Position Sensor B<br>
+(V)</p>
+<p>A potentiometer connected to the accelerator pedal cable.<br>
+This indicates half the voltage value of APP sensor A.</p>
+<p><img border="0" class="lazy" data-original="Images/PARSP_289_01.gif" width="350" height="350"></p>
+<p>A: APP SENSOR A<br>
+B: APP SENSOR B<br>
+i : The depressed amount of the accelerator pedal</p>
+
+<p class="mnemonic">PARSP_288_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+APP SENSOR-A:<br>
+Acceleration Pedal Position Sensor A<br>
+(V)</p>
+<p>A potentiometer connected to the accelerator pedal cable.</p>
+<p><img border="0" class="lazy" data-original="Images/PARSP_288_01.gif" width="350" height="350"></p>
+<p>A: APP SENSOR A<br>
+B: APP SENSOR B<br>
+i : The depressed amount of the accelerator pedal</p>
+
+<p class="mnemonic">PARSP_290_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+APP SENSOR:<br>
+Acceleration Pedal Position Sensor<br>
+(%)</p>
+<p>It indicates the depressed amount of the accelerator pedal.</p>
+
+<p class="mnemonic">PARSP_367_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+REL TP SENSOR:<br>
+Relative Throttle Position Sensor<br>
+(%) (°)<br>
+Unit Conversion Type: ANGLE</p>
+<p>This signal displays the throttle opening, relative to the fully closed position, where "0" is the fully closed position.</p>
+<p>It is different from TP SENSOR, which displays the absolute throttle position, where "0" is perpendicular to the throttle bore.</p>
+<p><br>
+OPERATING RANGE (IDLE)<br>
+(DBW idle)<br>
+0 - 5 [%]<br>
+0 - 4 [°]</p>
+<p><img border="0" class="lazy" data-original="Images/PARSP_367_01.gif" width="350" height="350"></p>
+<p>A : Default position (When IG SW is on)<br>
+B : Fully closed position (0°)</p>
+
+<p class="mnemonic">4R_FI_ISO2HT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+HO2S S2 HEATER CURRENT:<br>
+HO2S S2 Heater Current<br>
+(A)</p>
+<p>It indicates the drive current of O2 sensor heater.</p>
+
+<p class="mnemonic">4R_FI_CAN_DSO2HT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>HO2S HEATER DUTY:<br>
+(%)</p>
+<p>This parameter displays the heater ON duty for Heated Oxygen Sensor (HO2S).<br>
+To stabilize its output, HO2S has an internal heater.<br>
+Duty control can realize high accurate heater control rather than ON/OFF control.</p>
+<p><img class="lazy" data-original="Images/4R_FI_CAN_DSO2HT.gif" width="310" height="200"><br>
+A: SHO2S<br>
+B: SG<br>
+C: SO2SHTC<br>
+D: ECM/PCM<br>
+E: SECONDARY HO2S (SENSOR 2)<br>
+F: IG1<br>
+G: IGNITION SWITCH</p>
+
+<p class="mnemonic">PARSP_112_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+HO2S S2 HEATER:<br>
+Oxygen Sensor Sensor 2 Heater<br>
+(ON/OFF)</p>
+<p>A heater that stabilizes oxygen sensor performance and gets it working 
+sooner.<br>
+It turns off if the battery voltage is above 16 volts.</p>
+<p><br>
+OPERATING RANGE (IDLE)<br>
+(ON)</p>
+
+<p class="mnemonic">PARSP_89_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+HO2S S2:<br>
+Heated Oxygen Sensor Sensor 2<br>
+(V)</p>
+<p>A heated oxygen sensor installed after catalyst to represent double oxygen 
+sensor feedback and to examine primary oxygen sensor performance.</p>
+<p>OPERATING RANGE (IDLE)<br>
+0.00V - 1.40V</p>
+
+<p class="mnemonic">PARSP_17_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+Oxygen Sensor Heater:<br>
+HO2S (AF) S1 HEATER<br>
+(ON/OFF)</p>
+<p>- The data is indicated with ON/OFF.</p>
+<p>- ON/OFF of the oxygen sensor heater is controlled by the ECU, and it is 
+normally ON. It turns OFF if the coolant temperature is 0°C or lower, the 
+battery voltage is above 16V, or when the engine is stopped.</p>
+<p>Reference operating range (Idle)<br>
+(ON)</p>
+
+<p class="mnemonic">PARSP_87_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+FSS:<br>
+Fuel System Status</p>
+<p>OL COND : Open loop due to conditions<br>
+CLOSED : Closed loop<br>
+OL DRV : Open loop due to driving<br>
+OL DTC : Open loop due to DTC<br>
+CL O2SX : Closed loop but faulty O2S<br>
+</p>
+<p>This indicates the feedback condition and the reason why the fuel system is in a 
+given operating mode.</p>
+
+<p class="mnemonic">PARSP_86_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+LT FUEL TRIM:<br>
+Long Term Fuel Trim<br>
+(Counts)</p>
+<p>Air fuel feedback average (AF FB AVE) is used by the PCM to detect long term failures in the air fuel control system.
+ The fuel system is too rich when AF FB AVE drops below the lower limit threshold while the purge control solenoid is 
+turned off. The fuel system is too lean when AF FB AVE rises above the upper limit threshold.</p>
+<p>AF FB AVE generally chases AF FB, updating about once a minute. However AF FB AVE may remain much lower than AF FB
+depending on the amount of fuel vapors stored in the EVAP canister. An AF FB AVE value near the lower limit threshold 
+may be normal depending on the value of AF FB. </p>
+<p>NORMAL OPERATION - LOW CANISTER FUEL VAPOR SATURATION<br>
+<img border="0" class="lazy" data-original="Images/PARSP_86_01_01.jpg" width="350" height="165"></p>
+<p>A : AF FB (ST FUEL TRIM)<br>
+B : AF FB AVE (LT FUEL TRIM)<br>
+C : Threshold line</p>
+<p>The graph above shows the AF FB value operating near the ideal value of 1.00. AF FB AVE is slowly chasing AF FB and 
+is also staying near 1.00. </p>
+<p>NORMAL OPERATION - HIGH CANISTER FUEL VAPOR SATURATION<br>
+<img border="0" class="lazy" data-original="Images/PARSP_86_01_02.jpg" width="350" height="165"></p>
+<p>A : AF FB (ST FUEL TRIM)<br>
+B : AF FB AVE (LT FUEL TRIM)<br>
+C : Threshold line</p>
+<p>In the case of a saturated EVAP canister, AF FB may be reading normally but AF FB AVE will drop near or below the 
+lower limit threshold. The PCM has logic to prevent a DTC from setting during this condition. The graph above shows the 
+AF FB value reading normally and the AF FB AVE at the lower limit threshold. When this occurs, the PCM cuts purge 
+operation and sees if AF FB AVE begins to return toward 1.00. If AF FB AVE increases above a certain threshold, 
+the monitor is paused for a set time and purge is turned back on to remove excess purge vapor from the canister. 
+The monitor is resumed after the set time expires. </p>
+<p>TOO LEAN<br>
+<img border="0" class="lazy" data-original="Images/PARSP_86_01_03.jpg" width="348" height="188"></p>
+<p>A : AF FB (ST FUEL TRIM)<br>
+B : AF FB AVE (LT FUEL TRIM)<br>
+C : Threshold line</p>
+<p>The graph above shows the AF FB value operating above the upper limit threshold. AF FB AVE slowly chased AF FB 
+above the threshold causing a DTC to set.</p>
+<p>TOO RICH<br>
+<img border="0" class="lazy" data-original="Images/PARSP_86_01_04.jpg" width="350" height="172"></p>
+<p>A : AF FB (ST FUEL TRIM)<br>
+B : AF FB AVE (LT FUEL TRIM)<br>
+C : Threshold line</p>
+<p>The graph above shows the AF FB value operating below the lower limit threshold. AF FB AVE slowly chased AF FB 
+below the threshold causing a DTC to set. </p>
+
+<p class="mnemonic">4R_FI_CAN_DAFHT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>AF HEATER:<br>
+<p>(%)</p>
+<p>This parameter displays LAF sensor heater ON duty.</p>
+<p>0% means Heater OFF.</p>
+<p><img class="lazy" data-original="Images/4R_FI_CAN_AFCAD.gif" width="310" height="210"><br>
+A: AFS+<br>
+B: AFS-<br>
+C: AFSHTC<br>
+D: SUBRLY<br>
+E: MRLY<br>
+F: ECM/PCM<br>
+G: A/F SENSOR (SENSOR 1)<br>
+H: PGM-FI SUBRELAY<br>
+I:  PGM-FI MAIN RELAY 1<br>
+J: BATTERY</p>
+
+<p class="mnemonic">PARSP_85_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+AF FB (ST FUEL TRIM):<br>
+Short Term Fuel Trim<br>
+(Counts)</p>
+<p>Air fuel feedback is a short term correction to fuel delivery. 
+The base value is 1.00. A value greater than 1.00 indicates injector duration is being increased 
+and a value less than 1.00 indicates injector duration is being decreased. </p>
+<p>Air Fuel Ratio Leaner Than Command<br>
+<img border="0" class="lazy" data-original="Images/PARSP_85_01_01.jpg" width="350" height="245"></p>
+<p>The graph above shows the PCM using AF FB (ST FUEL TRIM) to correct an air fuel ratio that became too lean. 
+The actual air fuel ratio shown in green reached about 16.8, much leaner than the command air fuel ratio of 14.79 
+shown in blue. In response the PCM increased injector duration by increasing the air fuel feedback value shown in 
+red from 1.03 to 1.06. The additional amount of fuel caused the air fuel ratio to drop back down toward 
+the commanded air fuel ratio of 14.79.</p>
+<p>Air Fuel Ratio Richer Than Command<br>
+<img border="0" class="lazy" data-original="Images/PARSP_85_01_02.jpg" width="350" height="240"></p>
+<p>The graph above shows the PCM using AF FB (ST FUEL TRIM) to correct an air fuel ratio that became too rich. 
+The actual air fuel ratio shown in green reached about 13.8, much richer than the command air fuel ratio of 14.79 
+shown in blue. In response the PCM decreased injector duration by decreasing the air fuel feedback value shown in 
+red from 1.06 to 1.03. The lower amount of fuel caused the air fuel ratio to rise back toward the commanded air fuel ratio 
+of 14.79. </p>
+
+<p class="mnemonic">4R_FI_CAN_AFRAC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>AF SENSOR IMPEDANCE:<br>
+(Ohm)</p>
+<p>LAF sensor (DENSO) impedance. <br>
+When LAF sensor is driven, the valid data is replied.</p>
+<p><img class="lazy" data-original="Images/4R_FI_CAN_AFCAD.gif" width="310" height="210"><br>
+A: AFS+<br>
+B: AFS-<br>
+C: AFSHTC<br>
+D: SUBRLY<br>
+E: MRLY<br>
+F: ECM/PCM<br>
+G: A/F SENSOR (SENSOR 1)<br>
+H: PGM-FI SUBRELAY<br>
+I:  PGM-FI MAIN RELAY 1<br>
+J: BATTERY</p>
+
+<p class="mnemonic">4R_FI_CAN_AFCAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>AF SENSOR SIGNAL PLUS:<br>
+(V)</p>
+<p>This parameter displays the AFS+ line voltage for LAF sensor.</p>
+<p><img class="lazy" data-original="Images/4R_FI_CAN_AFCAD.gif" width="310" height="210"><br>
+A: AFS+<br>
+B: AFS-<br>
+C: AFSHTC<br>
+D: SUBRLY<br>
+E: MRLY<br>
+F: ECM/PCM<br>
+G: A/F SENSOR (SENSOR 1)<br>
+H: PGM-FI SUBRELAY<br>
+I:  PGM-FI MAIN RELAY 1<br>
+J: BATTERY</p>
+
+<p class="mnemonic">4R_FI_CAN_AFVAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>AF SENSOR SIGNAL MINUS:<br>
+(V)</p>
+<p>This parameter displays the AFS- line voltage for LAF sensor.</p>
+<p><img class="lazy" data-original="Images/4R_FI_CAN_AFCAD.gif" width="310" height="210"><br>
+A: AFS+<br>
+B: AFS-<br>
+C: AFSHTC<br>
+D: SUBRLY<br>
+E: MRLY<br>
+F: ECM/PCM<br>
+G: A/F SENSOR (SENSOR 1)<br>
+H: PGM-FI SUBRELAY<br>
+I:  PGM-FI MAIN RELAY 1<br>
+J: BATTERY</p>
+
+<p class="mnemonic">4R_FI_CAN_CMDEQRAT_KCMD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+AF FB CMD:<br>
+Air Fuel Ratio Feedback Command</p>
+<p>The target air/fuel ratio that the ECM controls from the oxygen sensor data.<br>
+The reciprocal of AF FB CMD is A/F LAMBDA CMD.</p>
+
+<p class="mnemonic">4R_FI_CAN_CMDEQRAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>A/F LAMBDA CMD<br>
+Air Fuel Lambda Command<br>
+This is equivalent to Commanded Equivalence Ratio.<br>
+NOTE: Commanded Equivalence Ratio is defined in Service$01 PID $44 specified in SAE J1979/ISO 15031-5.<br>
+The reciprocal of A/F LAMBDA CMD is AF FB CMD.</p>
+<p>A/F Command<br>
+<br>
+&lt;primary O2 sensor&gt;<br>
+Fuel system that utilise conventional oxygen sensor shall display the commanded 
+open loop equivalence ratio while the fuel control system is in open loop. A/F 
+shall indicate about 1.0 while in closed loop fuel.<br>
+<br>
+&lt;primary LAF sensor&gt;<br>
+Fuel system that utilise wide-range/linear oxygen sensors shall display the 
+command equivalence ratio in both open loop and closed loop operation.<br>
+<br>
+&middot;open loop&middot;&middot;&middot;A/F sensor F/B<br>
+&middot;close loop&middot;&middot;&middot;A/F sensor NO F/B</p>
+<p>
+<img border="0" class="lazy" data-original="Images/4R_FI_CAN_CMDEQRAT_1.GIF" width="340" height="120"></p>
+<p>For example,for gasoline,stoichiometric is 14.64:1 ratio.<br>
+If the fuel control system was commanding an 0.95 A/F the commanded A/F ratio to 
+the engine would be 14.64*0.95=13.9A/F.</p>
+
+<p class="mnemonic">4R_FI_LAMBDA_AFR</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+AIR FUEL RATIO:<br>
+Air Fuel Ratio</p>
+<p>This indicates the Air Fuel Ratio calculated from A/F LAMBDA.</p>
+<p>NOTE: Air Fuel Ratio = 14.7<font face="Times New Roman">*</font>A/F LAMBDA</p>
+
+<p class="mnemonic">PARSP_298_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+AF LAMBDA:<br>
+A/F Sensor Equivalence Ratio</p>
+<p>This indicates the equivalence ratio which is the current measured air/fuel 
+ratio divided by the stoichiometric A/F ratio.</p>
+<p>LAMBDA &gt; 1 Lean<br>
+LAMBDA &lt; 1 Rich</p>
+
+<p class="mnemonic">4R_FI_CAN_TAC_ACET</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+A/C TEMPERATURE SENSOR:<br>
+Air Conditioning Temperature Sensor<br>
+(°C) (°F) (V)<br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>It indicates the air conditioner evaporator temperature sensor output which input to FI ECU. It is A/C air conditioner evaporator temperature.<br>
+If there is no input from the sensor to FI ECU, this parameter will display the value when open circuit(i.e. -40degC) is happened.<br>
+<br>
+FI ECU uses this information when to operate A/C clutch.<br>
+If this sensor has failure or line open/short between sensor and FI ECU, A/C clutch will not be ON.<br>
+<br>
+NOTE:This parameter may display the value when open circuit(i.e. -40degC) when A/C clutch operation is no problem.<br>
+Then, please check ECM/PCM input terminal for this sensor.<br>
+You can find out the terminal is not connected to the sensor.<br>
+In this case, FI ECU received the sensor output from air conditioner control unit thru CAN newtwork, and it is used for A/C clutch operation.</p>
+
+<p class="mnemonic">4R_FI_ACRPS_ACRP</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+A/C PRESSURE SENSOR :<br>
+A/C Pressure Sensor<br>
+(V) (kPa) (MPa) (kgf/cm<sup>2</sup>) (psi)</p>
+Unit Conversion Type: A/C PRESSURE<br>
+<p>The A/C pressure sensor measures the pressure in the high side of the A/C 
+system.</p>
+
+<p class="mnemonic">4R_FI_CAN_ACS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+A/C SWITCH:<br>
+A/C Switch<br>
+(ON/OFF)</p>
+<p>A/C switch data list goes to ON when the following conditions are met:<br>
+- Thermal protector is in the closed position.<br>
+- A/C pressure switch is closed (above 28 psi and below 455 psi).<br>
+- A/C switch is in the ON position.<br>
+- Heater fan switch is in position 1,2,3, or 4.<br>
+<br>
+A 5V reference is sent from the PCM through all the closed switches through the heater fan switch (only in positions 1,2,3 or 4) to body ground (5V reference needs to see a path to ground).<br>
+<br>
+A/C switch data list goes to OFF when the following conditions are met:<br>
+- Anyone of the switches is in the open position.<br>
+- Heater fan speed is in the OFF position.<br>
+- The 5V reference has no path to ground.<br>
+<br><br>
+NOTE: This parameter may be displayed even if the vehicle does not equip the A/C system.<br>
+In this case, the value will be OFF. This is not problem.</p>
+
+<p class="mnemonic">PARSP_36_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+BRAKE SWITCH:<br>
+Brake Switch<br>
+(ON/OFF)</p>
+<p>- This sensor detects the operation status of the brake pedal. The brake lamp 
+switch voltage is used for signal. When the brake pedal is not operated, the BKSW terminal does not output the voltage. When the brake pedal is depressed, 
+the switch turns ON, and the brake lamp illuminates. As a result, the battery 
+voltage is applied to the BKSW terminal, and BKSW terminal outputs the voltage. 
+When the voltage from this terminal is ON, the computer detects the brake pedal 
+operation.</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_36_01_01.gif" width="350" height="350"></p>
+<p>i: IG<br>
+ii: Brake switch<br>
+iii: Brake light<br>
+iv: Oil pressure switch<br>
+v: PSW<br>
+vi: BKSW<br>
+vii: ECU<br>
+viii: Reference voltage circuit<br>
+ix: Computer</p>
+
+<p class="mnemonic">4R_FI_CAN_CRTMSW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CLUTCH PEDAL POSITION SWITCH B:<br> 
+Clutch Pedal Position Switch B<br> 
+(OPEN/CLOSE)</p>
+<p>AT control unit send the open signal to PGM-FI unit when the clutch pedal is depressed
+and PGM-FI unit will cancel the auto cruse.<br>
+<p>Cruise control system cancellation request input from AT shift selector switches or MT gear lever. 
+If you step on clutch pedal lightly,cruise control will be cancelled in few seconds.<br>
+<p>AT control unit will send this signal when the clutch pedal is depressed five seconds or more.
+This signal has five seconds delay to avoid the frequent cancel for auto cruse.<br>
+<p>Note:Cruise control Not support vehicle value of the unit is "CLOSE".<br>
+</p> 
+
+<p class="mnemonic">PARSP_219_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+A/T R SWITCH:<br>
+A/T R Position Switch<br>
+(ON/OFF)</p>
+<p><br>
+When the A/T shift lever is shifted to the R position, the A/T R switch 
+indicates ON to the ECM (electrically closed).</p>
+
+<p class="mnemonic">PARSP_31_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+PNP SWITCH:<br>
+A/T Park/Neutral Position Switch<br>
+(P-N/GEAR)</p>
+<p>When the A/T shift lever is shifted to &quot;P&quot; or &quot;N&quot; position, the PNP switch 
+indicates P-N to the ECM (electrically closed).<br>
+If it is in gear, the PNP switch indicates GEAR.</p>
+
+<p class="mnemonic">PARSP_270_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+GEAR POSITION:<br>
+Gear Position</p>
+<p>This shows the <u>estimated</u> gear position is calculated from both of the Main shaft speed sensor and the Countershaft speed sensor.</p>
+<p>After IG ON, this parameter shows "Neutral or unknown".<br>
+After engine is started, ECU estimated gear position as like below figure image.</p>
+<p><br>
+Example) This parameter shows "1" at A. When the vehicle condition is changed from A to B, this parameter shows "2". In the same way, this parameter value will be from "2" to "1" when the vehicle status is changed from B to A.</p>
+<p><img border="0" class="lazy" data-original="Images/4R_FI_CAN_NGP.jpg" width="360" height="300"></p>
+<p>Fig: Image of the routine to estimate gear position (6th gear position)<br> 
+X: Engine speed (Main shaft speed)<br>
+Y: Vehicle speed (Countershaft speed)</p>
+<p>NOTE:</p>
+<ul>
+<li>Regards to vehicles which are less than 09 model year (included 09MY), this parameter will continue to show highest gear position till IG OFF if the engine is stalled.</li>
+<li>Regards to vehicles which are 10 model or above, this parameter will show "Neutral or unknown" if the engine is stalled or idling stop operation.</li>
+</ul>
+
+<p class="mnemonic">PARSP_27_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ELD:<br>
+ELD</p>
+<p>- The ELD unit detects the magnetic flux generated in the main wire harness of 
+the vehicle, by the pickup for the magnetic flux detection. This magnetic flux 
+is in proportion to the current amount of the harness, therefore, 
+increase/decrease of electric power consumption can be detected by monitoring 
+the magnetic flux.</p>
+<p>- Increase/decrease amount of the electric power consumption is output to the 
+PGM-FI ECU via the signal output circuit.</p>
+<p>- The output signal of the electric power consumption has characteristics in 
+which consumption increases, as the signal voltage decreases.</p>
+<p>- The ELD sensor is installed on the main fuse box. It detects the electric 
+load amount used via the vehicle from the current flow of the main power 
+harness.</p>
+<p>- The ELD sensor has the unit structure with an amplifier. It detects the 
+load current change of the vehicle by the current sensor, amplifies it by the 
+amplifier, and converts it into the signal voltage.</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_27_01_01.gif" width="350" height="350"></p>
+<p>Fig: ELD unit<br>
+i : Pick-up<br>
+ii : IG1<br>
+iii : ELD unit<br>
+iv : Detection circuit<br>
+v : Signal output circuit<br>
+vi : ACG<br>
+vii : EL<br>
+viii: ACGC<br>
+ix :ACGF<br>
+x : ECU<br>
+xi : Detection circuit<br>
+xii: Control signal<br>
+xiii: Detection circuit<br>
+xiv: Computer</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_27_01_02.gif" width="350" height="350"></p>
+<p>Fig: Signal output characteristics<br>
+Y : V<br>
+X : Electric power consumption</p>
+
+<p class="mnemonic">PARSP_317_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IG1 LEVEL:<br>
+IG1 Voltage Level<br>
+(HIGH/LOW)</p>
+<p>It indicates the IG1 voltage level.</p>
+
+<p class="mnemonic">PARSP_26_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+BATTERY:<br>
+Battery Voltage  (V)</p>
+<p>Standard condition:12V</p>
+<p>The battery is charged from the generator at about 12V to 15V while the engine 
+is running.<br>
+BATTERY indicates the battery voltage whenever ignition switch is on.</p>
+
+<p class="mnemonic">4R_FI_FCDEC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+FUEL CUT DECEL :<br>
+Fuel Cut Decel<br>
+(ON/OFF)</p>
+<p>This parameter displays the status of the operation mode of the control 
+module used to turn off the fuel injectors during certain deceleration 
+conditions.</p>
+
+<p class="mnemonic">4R_FI_FC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+FUEL CUT :<br>
+Fuel Cut<br>
+(ON/OFF)</p>
+<p>This parameter displays the status of the operation mode of the control 
+module used to turn off the fuel injectors.</p>
+
+<p class="mnemonic">4R_FI_IDLING</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IDLING :<br>
+Idling<br>
+(ON/OFF)</p>
+<p>With the ignition switch ON, the engine running at idle, this will be ON. Depressing the accelerator pedal while idling will turn it OFF.</p>
+
+<p class="mnemonic">PARSP_321_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+KNOCK CTRL :<br>
+Knock Control</p>
+<p>It indicates the IG timing correction when the control module is adjusting the 
+IG timing to alleviate excessive engine knock.</p>
+
+<p class="mnemonic">4R_FI_CAN_MBKSAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+KNOCK SENSOR(Circuit Diag):<br>
+(V)<br>
+<ul>
+<li>This parameter displays the filtered input voltage of the FI control unit integrated knock sensor. It is used to detect open/short conditions on the knock sensor line.</li>
+<li>Value of this parameter is usually about 2.5V. The value will differ in case of failure (open line between sensor and ECU, short to Vcc, short to GND, etc).</li>
+<li>This parameter is introduced for the Multi-Band Knock System. Unlike the usual knock detection system, this system features digital signal analysis.</li><br></p>
+<p>NOTE: To judge occurrence of knocking and/or knock system performance, please use the parameters "KNOCK RETARD" and  "KNOCK CTRL".</p>
+ </ul>
+
+<p class="mnemonic">PARSP_53_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+KNOCK RETARD:<br>
+Knock Retard</p>
+<p>This status indicates that the ECU retards the specified degree of the ignition 
+timing from the basic ignition timing to prevent knocking based on the signal 
+from the knock sensor.</p>
+<p>When the knock signal indicating abnormal combustion of the engine is sent 
+from the knock sensor to the ECU, the ECU retards the specified degree of the 
+ignition timing from the basic ignition timing to prevent knocking.</p>
+<p>Knock control</p>
+<p>Knocking is closely related to the ignition timing. When the ignition timing 
+is advanced, the maximum combustion pressure increases, thus the knocking 
+tendency also increases.</p>
+<p>OPERATING RANGE (IDLE) 0°</p>
+
+<p class="mnemonic">PARSP_52_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+SPARK ADVANCE:<br>
+Spark Advance Angle Degrees<br>
+<p>(°)</p>
+<p>Various sensors input to the ECM so that ignition timing can be optimized for 
+different driving conditions.<br>
+It is the advance angle of number 1 cylinder.</p>
+<p>OPERATING RANGE (IDLE)<br>
+<p>13° - 18°</p>
+
+<p class="mnemonic">PARSP_51_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+INJECTOR:<br>
+Injector</p>
+(ms)</p>
+<p>- This status indicates that the ECU transmits the determined injection amount 
+to the injector.</p>
+<p>- The ECU determines the optimum injection amount depending on the engine 
+operating conditions using the signals from all the sensors, actuators, relays, 
+and valves.</p>
+<p>- The injector is a solenoid valve which supplies the optimum amount of fuel 
+depending on the engine operating conditions. The pressure-adjusted fuel is 
+supplied to the injector where it is measured and injected into the intake 
+manifold with the minimum valve opening time. This enables the optimum fuel 
+supply. In addition, as the engine operation range changes from idling to medium 
+speed, and finally to the top speed, it requires the instantaneous measurement 
+and injection depending on the situation. For this reason, the injector is a 
+resistor-integrated type with improved response.</p>
+<p>(1) Injector activation</p>
+<p>- When the solenoid coil is energized, the magnetic flux generated on the 
+coil energizes the core. Then the core is pulled and moves into the solenoid 
+coil by overcoming the solenoid spring force. At this time, the needle valve 
+also moves together with the core. This makes the needle valve and valve seat of 
+the valve body separated and the fuel is injected. The measurement amount is 
+calculated using the coil energization time and the pre-applied fuel pressure.</p>
+<p>(2) Resistor operation</p>
+<p>- The resistor improves the injector response. As the engine speed increases, 
+the time-based energization count (ON/OFF) of the coil also increases. The 
+increased alternative resistance prevents the current flowing smoothly. At this 
+time, the injector functions to improve the response of the solenoid coil.</p>
+<p>(3) Injector operation</p>
+<p>- After the computer determines the operation time (injection time), the 
+voltage signal transmitted from the main relay via the resistor injector to the 
+drive circuit turns ON the drive circuit. The drive current flows to the 
+solenoid coil of the injector to generate the operation waveform which controls 
+the coil.</p>
+<p>- The injector starts operation gradually when receiving the operation ON 
+signal by the operation waveform generated on the coil. The operation time until 
+the injector is completely operated (the valid operation time) is considered as 
+the invalid operation time. The total operation time includes this invalid time.</p>
+<p>- When the operation signal is turned OFF, the counter electromotive voltage 
+rises rapidly on the coil. This risen voltage ensures that the injection 
+properly completes.</p>
+<p>- The injector is a solenoid valve which is required high opening/closing 
+precision, response, endurance. It consists of plunger, needle valve, core, 
+solenoid coil, filter, and valve.</p>
+<p>- The fuel supplied via the inside of the injector is injected through the 
+needle valve. The fuel lubricates and cools the injector to stabilize the 
+temperature of the needle valve. The injection amount is adjusted by changing ON 
+time of ON/OFF output signals synchronized with the engine speed signal.</p>
+<p>&lt;Current flow&gt;</p>
+<p>- The injector power is supplied from the battery via the main relay when the 
+ignition is turned ON. The ground is made in the ECU to activate the injector.</p>
+<p>&lt;Operation&gt;</p>
+<p>1. After the ECU determines the injection time, the fuel injector is 
+energized.</p>
+<p>2. This energizes the solenoid coil to pull the core.</p>
+<p>3. Because the needle valve and plunger are integrated with the core, the 
+needle valve lifts.</p>
+<p>4. The inside of the injector is filled with the pressurized fuel. When the 
+needle valve lifts, the fuel is injected through the tip of the injector.</p>
+<p>5. The lift amount of the injector needle valve is set to the specified 
+amount, and the fuel pressure is maintained at the specific value by the 
+pressure regulator. Therefore, the injection amount is determined by the valve 
+opening time (energization time of the solenoid valve).</p>
+<p>- Reference operating range (idle) 1.5ms - 3.5ms</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_51_01_01.gif" width="350" height="350"></p>
+<p>Fig: Injector drive signal, waveform characteristics<br>
+Y: V<br>
+X: Time<br>
+i : Drive waveform<br>
+ii: Inefficient drive time<br>
+iii: Efficient drive time<br>
+iv: Drive signal<br>
+v : ON<br>
+vi: OFF</p>
+
+<p class="mnemonic">4R_FI_CNDOLVL</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ENGINE OIL LEVEL MONITOR CONDITION:<br>
+Engine Oil Monitor Condition<br>
+(ACTIVE) (INACTIVE)</p>
+
+<p class="mnemonic">4R_FI_LOIL</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ENGINE OIL LEVEL:<br>
+Engine Oil Level<br>
+(mm)</p>
+
+<p class="mnemonic">4R_FI_CAN_RVTS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+SOLENOID RETURN SIGNAL:<br>
+Solenoid Return Signal<br>
+(ON/OFF)</p>
+<p>It indicates ON when the VTS circuit is normal and VTS is ON.</p>
+<p>When the circuit has a problem, it stays ON or OFF.</p>
+
+<p class="mnemonic">PARSP_50_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+VTEC SOL:<br>
+VTEC Solenoid Valve (Spool Valve)<br>
+(ON/OFF)</p>
+<p>The ECM opens the solenoid valve to change the actuation of engine valve timing 
+and lift to improve performance.<br>
+The change point depends on the engine load conditions.</p>
+
+<p class="mnemonic">4R_FI_CAN_EGRST</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>EGR FLOW OPEN RATIO:<br>
+(%)</p>
+<p>This is diagnostic result information about Exhaust Gas Recirculation (EGR) Insufficient Flow (P0401).<br>
+This is the ratio of current EGR flow to pre-determined normal EGR flow. <br>
+(EGR FLOW OPEN RATIO) = (Current EGR Flow) / (Pre-determined Normal EGR Flow)</p>
+<ul>
+<li>"Current EGR Flow" is calculated from intake manifold pressure (i.e. MAP) between when the EGR valve is fully opened and when it is fully closed under the monitor of P0401.<br>
+(Current EGR Flow) = (MAP when the EGR valve is fully opened)-(MAP when the EGR valve is fully closed)</li>
+<li>"Pre-determined Normal EGR Flow" is the basic intake manifold pressure (i.e. MAP) between when the EGR valve is fully opened and when it is fully closed EGR if there is EGR passage clogged. It is determined from the table in ECU program when "Current EGR Flow" is calculated because it shall be different by vehicle condition and environment.</li>
+</ul>
+<p>When this parameter shows 100%, it means this system is normal and there is no EGR passage clogged. If this parameter is malfunction threshold or less, system will be malfunction and EGR passage is clogged.<br>
+Then P0401shall be occurred. The malfunction threshold is different by each model. Refer to "Advanced Diagnostic" information for each model.<br> 
+For Example: Regards to 12MY FIT AT, the threshold is 20%.</p>
+<p><u><b>NOTE: If the monitor of P0401 is not executed in this drive cycle, this parameter will show "0%".</p></u></b>
+<p>Moreover, Enable condition of P0401 is different between each model. Refer to "Advanced Diagnostics" for each model.<br>
+General Description: The EGR valve is closed during deceleration with the throttle valve fully closed. Then the ECM/PCM fully opens the EGR valve. After a set time, the ECM/PCM computes the ratio of the present EGR flow to the normal EGR flow by monitoring the fluctuation of the intake manifold pressure between when the EGR valve is fully opened and when it is fully closed. Then, ECM/PCM diagnoses P0401.</p>
+<p><u>Throttle Valve</p></u>
+<p><img border="0" class="lazy" data-original="Images/4R_FI_EGRST_Throttle.jpg" width="380" height="100"></p>
+<p><u>EGR Valve</p></u>
+<p><img border="0" class="lazy" data-original="Images/4R_FI_EGRST_EGRvalve.jpg" width="380" height="100"></p>
+<p><u>MAP Sensor</p></u>
+<p><img border="0" class="lazy" data-original="Images/4R_FI_EGRST_MAP.jpg" width="380" height="100"></p>
+<p><u>Engine Speed</p></u>
+<p><img border="0" class="lazy" data-original="Images/4R_FI_EGRST_NE.jpg" width="380" height="100"></p>
+<p>A: Open<br>
+B: Close<br>
+C: High<br>
+D: Low<br>
+E: Actual<br>
+F: Command<br>
+G: Threshold for P0401<br>
+H: When EGR flow rate is 100%<br>
+Fig: P0401 General description</p>
+
+<p class="mnemonic">PARSP_56_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+EGR valve position sensor (EGR VLS):<br>
+EGR Lift Sensor</p>
+<p>(V)</p>
+<p>- The EGR control reduces NOX in the exhaust gas. It recirculates the exhaust 
+gas into the intake manifold, and mix it into intake mixture to reduce the 
+combustion temperature.</p>
+<p>(1) Activation</p>
+<p>- When the computer determines the recirculation amount of EGR, the EGR 
+control SOL V is activated, and the intake manifold vacuum is applied to the 
+diaphragm of the EGR valve, then, the valve connected to the diaphragm opens. As 
+a result, the exhaust gas from the exhaust manifold flows into the intake 
+manifold.</p>
+<p>- The EGR valve has the valve position sensor, and the computer detects the lift amount 
+of the valve. Therefore, it controls the drive signal (ES) sent to the EGR 
+control SOL V via the valve position sensor signal (EGRL) to obtain the required 
+recirculation amount.</p>
+<p>(2) Control signal</p>
+<p>- The voltage of the EGR valve position sensor signal becomes higher according to 
+the valve position. The voltage changes in proportion to the valve position. 
+Therefore, when the valve position calculated by the computer is not obtained, 
+the EGR control SOL V is activated to obtain it.</p>
+<p>- The drive signal (ES) of the EGR control SOL V is the duty signal. When the 
+ON time is long, the vacuum inflow amount applied to the diaphragm of the EGR 
+valve increases, and the lift amount of the EGR valve also increases.</p>
+<p>- The exhaust gas recirculation unit has the EGR valve with the valve position sensor. 
+It feedbacks the actual lift amount to the ECU to compare it with the target 
+lift amount in order to improve fuel economy and engine performance, and to 
+reduce NOX level.</p>
+<p>The EGR valve is operated by the mixture vacuum, which consists of the vacuum 
+that is controlled to the fixed value by the vacuum control valve, and the 
+secondary air that is taken through the EGR control solenoid valve. In each 
+operation range when the engine is cold, at idling, high speed, high load, and 
+deceleration, the EGR operation is cancelled to secure the engine performance.</p>
+<p>&lt;Operation&gt; In the EGR operation range, when the ECU receives the signals 
+from the sensors, it opens/closes the EGR control solenoid valve to obtain the 
+memorized target lift amount, and controls the CLOSE time (duty time). When the 
+EGR valve opens (lifts), the valve position sensor detects the opening amount (lift 
+amount), and it is sent to the ECU. Based on this signal, the ECU controls the 
+EGR valve to obtain the target lift amount.</p>
+<p>- Reference operating range (no lift) 0.95V - 1.50V</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_56_01_01.gif" width="350" height="350"></p>
+<p>Fig: Lift sensor signal<br>
+Y: V</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_56_01_02.gif" width="350" height="350"></p>
+<p>Fig: EGR control sol. valve drive signal<br>
+Y: V<br>
+X: Time<br>
+i: OFF<br>
+ii: ON</p>
+
+<p class="mnemonic">PARSP_136_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+EGR LIFT:<br>
+EGR Valve Lift</p>
+<p>EGR LIFT:(actual)
+The EGR control reduces NOX in the exhaust gas. It recirculates the exhaust gas 
+into the intake manifold, and mix it into intake mixture to reduce the combustion temperature. 
+The maximum lift quantity: 5 mm.</p>
+
+<p class="mnemonic">PARSP_137_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+EGR&nbsp; L COMMAND:<br>
+EGR Valve Lift Command</p>
+<p>EGR L COMMAND:(command)
+The EGR control reduces NOX in the exhaust gas. It recirculates the exhaust gas 
+into the intake manifold, and mix it into intake mixture to reduce the combustion temperature. 
+The maximum lift quantity: 5 mm.</p>
+
+<p class="mnemonic">4R_FI_CAN_OPSWR</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+OIL PRESSURE SWITCH :<br>
+Engine Oil Pressure Switch : Engine oil lamp light up when Engine pressure abnormal <br>
+(ON/OFF)</p>
+<p>Status of OPSW (Engine Oil Pressure Switch) signal input.</p>
+
+<p class="mnemonic">PARSP_46_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+SCS:<br>
+Service Check Signal<br>
+(OPEN/SHORT)</p>
+<p>When the SCS line is grounded, the Service Check Signal indicates SHORT.<br>
+After turning on the ignition switch, the indicator light blinks the DTCs.</p>
+
+<p class="mnemonic">4R_FI_CAN_ACC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+A/C CLUTCH:<br>
+Air Conditioning Clutch<br>
+(ON/OFF)</p>
+<p>The magnetic clutch is engaged when A/C switch is turned ON and the compressor 
+pressure switch and thermostat change to ON.<br>
+<br><br>
+NOTE: This parameter may be displayed even if the vehicle does not equip the A/C system.<br>
+In this case, the value will be OFF. This is not problem.</p>
+
+<p class="mnemonic">4R_FI_CAN_DOCAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CATA MONITOR CONDITION:<br>
+Catalytic System Monitoring Efficiency Condition<br>
+(OK/NG)</p>
+<p>This indicates the efficiency condition to detect catalytic system 
+deterioration.</p>
+
+<p class="mnemonic">PARSP_315_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+START IAT:<br>
+Intake Air Temperature at Start Up<br>
+(°C) (°F)<br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>This indicates the intake air temperature when the ignition switch is turned ON.</p>
+
+<p class="mnemonic">PARSP_316_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+START ECT:<br>
+Water Temperature at Start Up<br>
+(°C) (°F)<br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>This indicates the engine coolant Temperature when the ignition switch is turned 
+(ON)</p>
+
+<p class="mnemonic">PARSP_268_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MAX ENG SPD:<br>
+Maximum Engine Speed<br>
+(RPM)</p>
+<p>This parameter displays  the engine speed when an Engine Over-Speed Condition is detected. If an Engine Over-Speed Condition has not been detected, 0 is display.
+</p>
+
+<p class="mnemonic">PARSP_243_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CKP
+PULSER F/B LEARN:<br>
+CKP Pulser Feed Back Learn Condition<br>
+(Completed/Not Completed)</p>
+<p>This shows whether the vehicle has learned misfire detection and enhancement of 
+accuracy.It indicates &#39;Completed&#39; if this learning has been completed.</p>
+<p>&lt;Enable Criteria&gt;<br>
+ECT at 176°F(80°C) or higher.</p>
+<p>&lt;Procedure&gt;<br>
+Test-drive the vehicle on a level road. Decelerate (with the throttle fully 
+closed) from an engine speed of 2,500 rpm to 1,000 rpm with the A/T in 2 
+position or M/T in 1st gear.</p>
+
+<p class="mnemonic">PARSP_151_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IDLE TARGET:<br>
+Target idle speed<br>
+(RPM)</p>
+<p>Calculated target idle RPM in ECM.</p>
+<p><b>The target idle speed varies with the engine coolant water temperature or the engine load, etc.</b></p>
+<li>When the engine coolant water temperature is low, the idle speed is high</li>
+<p><img border="0" class="lazy" data-original="Images/4R_IDLE TARGET-1.gif" width="350" height="250"></p>
+<p>i:Idle speed<br>
+ii:Engine coolant  water temperature<br>
+ii-i:Low<br>
+ii-ii:High<br>
+iii:MT,AT/CVT(Neutral)<br>
+iv:AT/CVT(In gear)<br></p>
+<li>When the engine load is high, the idle speed is high.</li>
+<p><img border="0" class="lazy" data-original="Images/4R_IDLE TARGET-2.gif" width="350" height="250"></p>
+<p>i:Idle speed<br>
+ii:Engine load<br>
+ii-i:Low<br>
+ii-ii:High<br>
+iii:No load - Low load<br>
+iv:Medium load(Such as Small Light)<br>
+v:High load(Such as Head Light + Air/Con)<br></p>
+<li><b><u>US-OBD area only (US, Canada, Korea)</u></b></li>
+<p>The PCM controls the idle speed so that the target idle speed set in advance meets the actual idle speed by comparing both values.<br>
+<p>When the actual idle speed is lower than the target idle speed and the state that the difference is more than 
+a specified value continues for more than a specified time, it is determined as the failure of the idle speed control system. (Too Low = P0506)<br>
+<p>Contrarily, when the idle speed is higher than the target idle speed and the state that the difference is more than 
+a specified value continues for more than a specified time, it is also determined as the failure of the idle speed control system. (Too High = P0507)<br>
+</p>
+
+<p class="mnemonic">PARSP_145_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IMMOBILIZER:<br>
+Immobilizer<br>
+(BAN/RUN)</p>
+<p>BAN : Immobilizer module prevents ECM from starting the engine.</p>
+<p>RUN : Immobilizer module allows ECM to start the engine.</p>
+
+<p class="mnemonic">PARSP_176_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+FAN HIGH CTRL:<br>
+Fan High Control<br>
+(ON/OFF)</p>
+<p>When 2-stage radiator fan is controlled to high mode by ECM, the fan high 
+control indicates ON.</p>
+
+<p class="mnemonic">PARSP_177_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+FAN LOW CTRL:<br>
+Fan Low Control<br>
+(ON/OFF)</p>
+<p>When 2-stage radiator fan is controlled to low mode by ECM, the fan low control 
+indicates ON.</p>
+
+<p class="mnemonic">PARSP_70_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MAIN RELAY(FP):<br>
+Main Relay for Fuel Pump<br>
+(ON/OFF)</p>
+<p>The main relay contains two individual relays.<br>
+This is the 2nd relay, which supplies power to the fuel pump.</p>
+
+<p class="mnemonic">PARSP_325_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IMT(IMRC) VALVE CMD:<br>
+Intake Manifold Tuning (Intake Manifold Runner Control) Valve Command<br>
+(OPEN/CLOSE)</p>
+<p>Two air intake paths are provided in the intake manifold.<br>
+The valve is closed at low engine speed.</p>
+
+<p class="mnemonic">PARSP_349_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MIL DIST :<br>
+Distance since MIL on<br>
+(km) (mile)<br>
+Unit Conversion Type: DISTANCE</p>
+<p>This indicates the distance that has elapsed since the ECM last commanded the 
+MIL on.</p>
+
+<p class="mnemonic">PARSP_142_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MIL STATUS:<br>
+MIL Status<br>
+(ON/OFF)</p>
+<p>ON : The MIL is turned on and ECM stores MIL indicated DTCs.<br>
+OFF : The MIL is not turned on.</p>
+
+<p class="mnemonic">PARSP_66_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MIL:<br>
+Malfunction Indicator Lamp<br>
+(ON/OFF)</p>
+<p>- The malfunction indicator lamp is an actuator which indicates the operating 
+status and the system status of the computer in the ECU. The operating condition 
+and the system status are indicated by ON/OFF of the MIL.</p>
+<p>- When the ignition switch is turned ON, the main power of the ECU (IGP) is 
+supplied, with which the computer is also activated. If there is no failure in 
+the system, the OFF signal is output to the drive circuit of the MIL. The drive 
+circuit is turned OFF by the OFF signal, which causes the MIL to be OFF.</p>
+<p>- If the computer detects the system failure during driving, it performs the 
+fail-safe control, and outputs the ON signal to the drive circuit. The drive 
+circuit is turned ON by the signal, which causes the MIL to be ON.</p>
+<p>- With the MIL is remained ON, if the ignition switch is turned OFF once, the 
+fail-safe control is reset and the MIL goes OFF. Then the normal control is 
+restored, and the MIL is remained OFF until the failure is detected again.</p>
+<p>- If the engine will not start and the MIL remains ON, it indicates the 
+computer is not operating.</p>
+<p>- The drive signal from the computer is used to switch ON (illuminating) and 
+OFF(not illuminating) the voltage applied from IGN to the drive circuit in the 
+ECU via the MIL. If the drive signal is not output by the computer, the drive 
+circuit itself is turned ON to illuminate the MIL.</p>
+<p><img border="0" class="lazy" data-original="Images/parsp_66_01_01.gif" width="350" height="350"></p>
+<p>Fig: Malfunction indicator lamp<br>
+i : IG<br>
+ii: Malfunction indicator lamp<br>
+iii: WARN<br>
+iv: IGP<br>
+v: ECU<br>
+vi: Drive circuit<br>
+vii: Computer</p>
+
+<p class="mnemonic">PARSP_75_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+EVAP PC DUTY:<br>
+Evaporative Purge Control Solenoid Valve Duty Percent<br>
+(%)</p>
+<p>It indicates the drive percentage of the solenoid valve.</p>
+
+<p class="mnemonic">PARSP_322_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+KNOCK CTRL EGR :<br>
+Knock Control (EGR)</p>
+<p>This indicates the IG timing correction when the EGR system is active.<br>
+The control module adjusts the IG timing to alleviate excessive engine knock.</p>
+
+<p class="mnemonic">4R_FI_CAN_NMFBCYL1</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL1 MISFIRE B:<br>
+No.1 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.1 cylinder.</p>
+
+<p class="mnemonic">4R_FI_CAN_NMFBCYL2</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL2 MISFIRE B:<br>
+No.2 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>It indicates number of misfire occurred at the No.2 cylinder.</p>
+
+<p class="mnemonic">4R_FI_CAN_NMFBCYL3</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL3 MISFIRE B:<br>
+No.3 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>It indicates number of misfire occurred at the No.3 cylinder.</p>
+
+<p class="mnemonic">4R_FI_CAN_NMFBCYL4</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL4 MISFIRE B:<br>
+No.4 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>It indicates number of misfire occurred at the No.4 cylinder.</p>
+
+<p class="mnemonic">4R_FI_NTDCA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MISFIRE CYCLE:<br>
+Misfire Cycle Counter<br>
+(Counts)</p>
+<p>This counter counts the number of TDC in every engine 200 rotations.<br>
+It returns to zero at 400 counts with L4 engine.<br>
+With V6 engine, at 600 counts.</p>
+
+<p class="mnemonic">4R_FI_NMFACYL1</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL1 MISFIRE:<br>
+No.1 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.1 cylinder.</p>
+
+<p class="mnemonic">4R_FI_NMFACYL2</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL2 MISFIRE:<br>
+No.2 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.2 cylinder.</p>
+
+<p class="mnemonic">4R_FI_NMFACYL3</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL3 MISFIRE:<br>
+No.3 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.3 cylinder.</p>
+
+<p class="mnemonic">4R_FI_NMFACYL4</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL4 MISFIRE:<br>
+No.4 Cylinder Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.4 cylinder.</p>
+
+<p class="mnemonic">4R_FI_CAN_NMCYLOBS1</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CYL1 TOTAL MISFIRE:<br>
+No.1 Cylinder Total Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.1 cylinder since ignition 
+was switched ON.<br>
+This value shows the cumulated values of both misfire types A and B. </p>  
+
+<p class="mnemonic">4R_FI_CAN_NMCYLOBS2</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CYL2 TOTAL MISFIRE:</p>
+No.2 Cylinder Total Misfire Counter<br>
+(Counts)<p></p>
+<p>This indicates the number of misfire that occurred at the No.2 cylinder since ignition 
+was switched ON.<br>
+This value shows the cumulated values of both misfire types A and B. </p>
+
+<p class="mnemonic">4R_FI_CAN_NMCYLOBS3</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CYL3 TOTAL MISFIRE:</p>
+No.3 Cylinder Total Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.3 cylinder since ignition 
+was switched ON.<br>
+This value shows the cumulated values of both misfire types A and B. </p>
+
+<p class="mnemonic">4R_FI_CAN_NMCYLOBS4</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CYL4 TOTAL MISFIRE:</p>
+No.4 Cylinder Total Misfire Counter<br>
+(Counts)</p>
+<p>This indicates the number of misfire that occurred at the No.4 cylinder since ignition 
+was switched ON.<br>
+This value shows the cumulated values of both misfire types A and B. </p>
+
+<p class="mnemonic">4R_FI_CAN_CDCMFA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MISFIRE DRIVING CYCLE:<br>
+Misfire Driving Cycle<br>
+(Count)</p>
+<p>The number of driving cycle as which misfire (criteria A) was detected.</p>
+
+<p class="mnemonic">4R_FI_CAN_MFCYL</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MISFIRED CYL:<br>
+Misfired cylinder<br>
+(B)</p>
+<p>Misfired cylinder bit information</p>
+<p>In case of No.1 and No.3 cylinder have misfired.<br>
+00000101</p>
+<p>In case of No.6 cylinder has misfired.<br>
+00100000</p>
+
+<p class="mnemonic">PARSP_156_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MISFIRE:<br>
+Misfire</p>
+<p>Misfire accumulated counter for CSF method</p>
+
+<p class="mnemonic">4R_FI_CAN_TCAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CATALYST TEMP :<br>
+Catalyst Temperature Sensor<br>
+(°C) (°F) <br>
+Unit Conversion Type: TEMPERATURE</p>
+<p>This parameter shall display catalyst substrate temperature.<br>
+It may be directly from a sensor, or may be inferred by the control strategy using other sensor inputs.<br>
+<br> 
+The definition of this parameter is equivalent to PID$3C specified in SAE J1979/ISO 15031-5.
+</p>
+
+<p class="mnemonic">4R_FI_CAN_MFTRQCYL1</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL CRANK SPEED #1:<br>
+CYL Crank Speed #1<br>
+(rad/s)</p>
+<p>This parameter shows engine speed change by combustion pressure torque of No.1 cylinder.<br>
+This is used for misfire detection.</p>
+<p><u>Calculation method</u>:<br>
+<ol>
+<li>FI ECU will calculate average engine speed (i.e.NE in fig.) and engine speed change (i.e. &#916;&omega; in fig.) from measured crank plus.<br>
+NOTE: &#916;&omega; (rad/s) = 2 * 3.14 * &#916;NE(rpm) / 60</li>
+<li>FI ECU will select &delta;&omega; at the crank position when combustion torque will accelerate the rotation. (i.e. &#916;&omega;<sub>n</sub> in fig.)</li>
+<li>FI ECU will calculate engine speed change about combustion torque from &#916;&omega;<sub>n</sub>. This value will be output from FI ECU to HDS. </li>
+</ol>
+<br>
+<img border="0" class="lazy" data-original="Images/4R_FI_CAN_MFTRQCYL.jpg" width="526" height="171"><br>
+Fig:Example of engine speed change at 2000rpm</p>
+<p><br>
+Engine speed will be increased at combustion because combustion torque to accelerate crank rotation will be happened.Then, this parameter will be positive value if there is no issue in the vehicle.<br>
+<ul>
+<li>Acceleration by combustion toque is weak when this parameter closes to 0.</li>
+<li>Acceleration by combustion toque is strong when this parameter becomes large. Especially, this parameter will show large value when cranking, idling (i.e. low engine speed and unstable engine state) etc.</li>
+</ul>
+On the other hand, when misfire is happened, engine speed of the cylinder is lower than average because of no combustion torque. Then, this parameter will be negative value, and show -8 rad/s or near.<br>
+<br>NOTE: minimum value of this parameter is -8 rad/s, so this parameter may continue to show -8 rad/s when misfire is happened.</p>
+<p><br>
+<u>How to use this parameter</u>:<br>
+<ol>
+<li>Please check this value whether positive or negative. If it is negative value, misfire is happened in the cylinder.</li>
+<li>Please compare the value with other cylinders. If this value is pretty smaller than other cylinder's one, abnormal combustion is happened in the cylinder. Then, please diagnose possible failures of misfire. <br>
+For example: poor injection flow, poor valve clearance, poor air flow etc</li>
+<li>Please compare the value with other cylinders. If this value is pretty larger than other cylinder's one, combustion pressure is shortage.<br>
+For example: compression leak etc</li></ol></p>
+
+<p class="mnemonic">4R_FI_CAN_MFTRQCYL2</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL CRANK SPEED #2:<br>
+CYL Crank Speed #2<br>
+(rad/s)</p>
+<p>This parameter shows engine speed change by combustion pressure torque of No.2 cylinder.<br>
+This is used for misfire detection.</p>
+<p><u>Calculation method</u>:<br>
+<ol>
+<li>FI ECU will calculate average engine speed (i.e.NE in fig.) and engine speed change (i.e. &#916;&omega; in fig.) from measured crank plus.<br>
+NOTE: &#916;&omega; (rad/s) = 2 * 3.14 * &#916;NE(rpm) / 60</li>
+<li>FI ECU will select &delta;&omega; at the crank position when combustion torque will accelerate the rotation. (i.e. &#916;&omega;<sub>n</sub> in fig.)</li>
+<li>FI ECU will calculate engine speed change about combustion torque from &#916;&omega;<sub>n</sub>. This value will be output from FI ECU to HDS. </li>
+</ol>
+<br>
+<img border="0" class="lazy" data-original="Images/4R_FI_CAN_MFTRQCYL.jpg" width="526" height="171"><br>
+Fig:Example of engine speed change at 2000rpm</p>
+<p><br>
+Engine speed will be increased at combustion because combustion torque to accelerate crank rotation will be happened.Then, this parameter will be positive value if there is no issue in the vehicle.<br>
+<ul>
+<li>Acceleration by combustion toque is weak when this parameter closes to 0.</li>
+<li>Acceleration by combustion toque is strong when this parameter becomes large. Especially, this parameter will show large value when cranking, idling (i.e. low engine speed and unstable engine state) etc.</li>
+</ul>
+On the other hand, when misfire is happened, engine speed of the cylinder is lower than average because of no combustion torque. Then, this parameter will be negative value, and show -8 rad/s or near.<br>
+<br>NOTE: minimum value of this parameter is -8 rad/s, so this parameter may continue to show -8 rad/s when misfire is happened.</p>
+<p><br>
+<u>How to use this parameter</u>:<br>
+<ol>
+<li>Please check this value whether positive or negative. If it is negative value, misfire is happened in the cylinder.</li>
+<li>Please compare the value with other cylinders. If this value is pretty smaller than other cylinder's one, abnormal combustion is happened in the cylinder. Then, please diagnose possible failures of misfire. <br>
+For example: poor injection flow, poor valve clearance, poor air flow etc</li>
+<li>Please compare the value with other cylinders. If this value is pretty larger than other cylinder's one, combustion pressure is shortage.<br>
+For example: compression leak etc</li></ol></p>
+
+<p class="mnemonic">4R_FI_CAN_MFTRQCYL3</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL CRANK SPEED #3:<br>
+CYL Crank Speed #3<br>
+(rad/s)</p>
+<p>This parameter shows engine speed change by combustion pressure torque of No.3 cylinder.<br>
+This is used for misfire detection.</p>
+<p><u>Calculation method</u>:<br>
+<ol>
+<li>FI ECU will calculate average engine speed (i.e.NE in fig.) and engine speed change (i.e. &#916;&omega; in fig.) from measured crank plus.<br>
+NOTE: &#916;&omega; (rad/s) = 2 * 3.14 * &#916;NE(rpm) / 60</li>
+<li>FI ECU will select &delta;&omega; at the crank position when combustion torque will accelerate the rotation. (i.e. &#916;&omega;<sub>n</sub> in fig.)</li>
+<li>FI ECU will calculate engine speed change about combustion torque from &#916;&omega;<sub>n</sub>. This value will be output from FI ECU to HDS. </li>
+</ol>
+<br>
+<img border="0" class="lazy" data-original="Images/4R_FI_CAN_MFTRQCYL.jpg" width="526" height="171"><br>
+Fig:Example of engine speed change at 2000rpm</p>
+<p><br>
+Engine speed will be increased at combustion because combustion torque to accelerate crank rotation will be happened.Then, this parameter will be positive value if there is no issue in the vehicle.<br>
+<ul>
+<li>Acceleration by combustion toque is weak when this parameter closes to 0.</li>
+<li>Acceleration by combustion toque is strong when this parameter becomes large. Especially, this parameter will show large value when cranking, idling (i.e. low engine speed and unstable engine state) etc.</li>
+</ul>
+On the other hand, when misfire is happened, engine speed of the cylinder is lower than average because of no combustion torque. Then, this parameter will be negative value, and show -8 rad/s or near.<br>
+<br>NOTE: minimum value of this parameter is -8 rad/s, so this parameter may continue to show -8 rad/s when misfire is happened.</p>
+<p><br>
+<u>How to use this parameter</u>:<br>
+<ol>
+<li>Please check this value whether positive or negative. If it is negative value, misfire is happened in the cylinder.</li>
+<li>Please compare the value with other cylinders. If this value is pretty smaller than other cylinder's one, abnormal combustion is happened in the cylinder. Then, please diagnose possible failures of misfire. <br>
+For example: poor injection flow, poor valve clearance, poor air flow etc</li>
+<li>Please compare the value with other cylinders. If this value is pretty larger than other cylinder's one, combustion pressure is shortage.<br>
+For example: compression leak etc</li></ol></p>
+
+<p class="mnemonic">4R_FI_CAN_MFTRQCYL4</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CYL CRANK SPEED #4:<br>
+CYL Crank Speed #4<br>
+(rad/s)</p>
+<p>This parameter shows engine speed change by combustion pressure torque of No.4 cylinder.<br>
+This is used for misfire detection.</p>
+<p><u>Calculation method</u>:<br>
+<ol>
+<li>FI ECU will calculate average engine speed (i.e.NE in fig.) and engine speed change (i.e. &#916;&omega; in fig.) from measured crank plus.<br>
+NOTE: &#916;&omega; (rad/s) = 2 * 3.14 * &#916;NE(rpm) / 60</li>
+<li>FI ECU will select &delta;&omega; at the crank position when combustion torque will accelerate the rotation. (i.e. &#916;&omega;<sub>n</sub> in fig.)</li>
+<li>FI ECU will calculate engine speed change about combustion torque from &#916;&omega;<sub>n</sub>. This value will be output from FI ECU to HDS. </li>
+</ol>
+<br>
+<img border="0" class="lazy" data-original="Images/4R_FI_CAN_MFTRQCYL.jpg" width="526" height="171"><br>
+Fig:Example of engine speed change at 2000rpm</p>
+<p><br>
+Engine speed will be increased at combustion because combustion torque to accelerate crank rotation will be happened.Then, this parameter will be positive value if there is no issue in the vehicle.<br>
+<ul>
+<li>Acceleration by combustion toque is weak when this parameter closes to 0.</li>
+<li>Acceleration by combustion toque is strong when this parameter becomes large. Especially, this parameter will show large value when cranking, idling (i.e. low engine speed and unstable engine state) etc.</li>
+</ul>
+On the other hand, when misfire is happened, engine speed of the cylinder is lower than average because of no combustion torque. Then, this parameter will be negative value, and show -8 rad/s or near.<br>
+<br>NOTE: minimum value of this parameter is -8 rad/s, so this parameter may continue to show -8 rad/s when misfire is happened.</p>
+<p><br>
+<u>How to use this parameter</u>:<br>
+<ol>
+<li>Please check this value whether positive or negative. If it is negative value, misfire is happened in the cylinder.</li>
+<li>Please compare the value with other cylinders. If this value is pretty smaller than other cylinder's one, abnormal combustion is happened in the cylinder. Then, please diagnose possible failures of misfire. <br>
+For example: poor injection flow, poor valve clearance, poor air flow etc</li>
+<li>Please compare the value with other cylinders. If this value is pretty larger than other cylinder's one, combustion pressure is shortage.<br>
+For example: compression leak etc</li></ol></p>
+
+<p class="mnemonic">PARSP_342_01</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CRUISE INDICATOR:<br>
+Cruise Control Light<br>
+(ON/OFF)</p>
+<p>When using cruise control ECM turns on CRUISE CONTROL light on the instrumental 
+panel.<br>
+NOTE: This light on the instrumental panel only comes on when cruise control is set in the driving 
+mode.</p>
+
+<p class="mnemonic">4R_FI_CAN_BKSWNC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CRUISE BRAKE SW/IDLE STOP SW:<br>
+Cruise Brake Switch/Idle Stop Switch<br>
+(OPEN/CLOSE)</p>
+<p>It indicates the signal from "Cruise Brake Switch" or "Idle Stop Switch".<br>
+This switch is normally closed.<br>
+When brake pedal is released, this parameter will indicate CLOSE.<br>
+<br>
+NOTE: This parameter name is determined by which switch is supported.</p>
+
+<p class="mnemonic">4R_FI_CAN_CCSW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+CRUISE CONTROL SYSTEM SWITCH STATUS:<br>
+Cruise Control System Switch Status<br>
+(DEFAULT/MAIN SW/CANCEL SW/SET SW/RESUME SW/SIGNAL LOST/SIGNAL SHORT)</p>
+<p>It means the status of the switch for cruise control system.<br>
+PGM-FI ECU receives this information from MICU.<br>
+<br>
+<ul>
+<li>&quot;DEFAULT&quot; means that any switches are not ON, or communication failure is happened, or before to start the communication for PGM-FI ECU.</li>
+<li>&quot;MAIN SW&quot; means that the MAIN switch is ON.</li>
+<li>&quot;CANCEL SW&quot; means that the CANCEL switch is ON.</li>
+<li>&quot;SET SW&quot; means that the SET switch is ON.</li>
+<li>&quot;RESUME SW&quot; means that the RESUME switch is ON.</li>
+<li>&quot;SIGNAL LOST&quot; means that the wire harness for cruise control switch is open.</li>
+<li>&quot;SIGNAL SHORT&quot; means that the wire harness for cruise control 
+switch is short.</li>
+</ul></p>
+
+<p class="mnemonic">4R_FI_CAN_DSTTRV</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>DRIVE DIST:<br>
+Distance traveled for current driving cycle<br>
+(m)</p>
+<p>This parameter displays the distance this driving cycle.</p>
+
+<p class="mnemonic">4R_FI_CAN_ERUNTM</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>ENG RUN TIME:<br>
+(sec)</p>
+<p>This parameter displays the time since engine start.<br>
+This is same as RUNTM defined in SAE1979/ISO 15031-5 PDR$1F.<br>
+It shall increment while engine is running.<br>
+It shall freeze if the engine stalls.<br>
+It shall be reset to zero during every control module power-up and when entering the key-on, engine off position.<br>
+It is limited to 65,535 seconds and shall not wrap around to zero.</p>
+
+<p class="mnemonic">4R_FI_CAN_NACCRK</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CKP NOISE:</p>
+<p>CKP pulse noise counter for the crank angle 6deg timing system.<br>
+This counter is incremented by the detection of abnormal number of crank pulses per crankshaft 360deg revolution.<br>
+Also, incremented by no missing tooth found while crankshaft 360deg revolution.<br>
+Does not count unit end of current driving cycle after the CKP sensor failure is decided.<br>
+Resets to zero by IG SW OFF. </p>
+
+<p class="mnemonic">4R_FI_CAN_NACTDC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CMP B NOISE:<br>
+<p>(TDC SENSOR NOISE)</p>
+<p>TDC pulse noise counter for the crank angle 6deg timing system.<br>
+This counter is incremented by the detection of abnormal number of TDC pulse per crankshaft 720deg revolution.<br>
+Does not count until end of current driving cycle after the TDC sensor failure is decided/<br>
+Resets to zero by IG SW OFF. </p>
+
+<p class="mnemonic">4R_FI_CAN_DCCRK</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CKP NO PULSE:</p>
+<p>CKP pulse disappearance counter for the crank angle 6deg timing system.<br>
+Under CKP sensor signal disappearance condition, this counter is incremented by the detection of normal TDC sensor signal.<br>
+The normal CKP sensor signal input resets this counter to zero.<br>
+Does not count until end of current driving cycle after the CKP sensor failure.<br>
+Reset to zero by IG SW OFF.</p>
+
+<p class="mnemonic">4R_FI_CAN_DCTDC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>CMP B NO PULSE:<br>
+(TDC SENSOR NO PULSE)</p>
+<p>TDC pulse disappearance counter for the crank angle 6deg timing system.<br>
+Under TDC sensor signal disappearance condition, this counter is incremented by the detection of normal CKP sensor signal.<br>
+The normal TDC sensor signal resets this counter to zero.<br>
+Dose not count unit end of current driving cycle after the TDC sensor failure is decided.<br>
+Resets to zero by IG SW OFF. </p>
+
+<p class="mnemonic">4R_FI_CAN_NTDCB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MISFIRE CYCLE B:<br>
+Misfire Cycle Counter<br>
+(Counts)</p>
+<p>This counter counts the number of TDC in every engine 1000 rotations.<br>
+It returns to zero at 2000 counts with L4 engine.<br>
+With V6 engine, at 3000 counts.</p>
+
+<p class="mnemonic">4R_FI_CAN_ELOAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ELD(Electrical Load Detector) (ELECTRIC LOAD VALUE) :</p>
+<p>(A)</p>
+<p>It detects the electric load amount used via the vehicle from the current 
+flow of the main power harness.</p>
+
+<p class="mnemonic">4R_FI_CAN_ETSENAN</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+SLIP RATIO OF TORQ OR START CLUTCH:<br>
+Slip Ratio Of Torq or Start Clutch<br>
+(%)</p>
+<p>Slip ratio of torque converter or start clutch.</p>
+
+<p class="mnemonic">4R_FI_CAN_IPBAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+BATTERY CURRENT (BATTERY SENSOR):<br>
+Battery Current (Battery Sensor)<br>
+<p>The battery current from battery sensor.<br>
+<p>In charging at positive side.<br>
+<p>Battery current (charge at positive) from battery sensor.<br>
+<p>(A)</p>
+
+<p class="mnemonic">4R_FI_CAN_MAP_SENSOR_HI_RES</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+MAP SENSOR (HI RES):<br>
+map sensor (hi res)<br>
+(kPa)(MPa)(mmHg)(inHg)(psi)<br>
+Unit Conversion Type: PRESSURE</p>
+<p>Manifold Absolute Pressure high resolution data.</p>
+
+<p class="mnemonic">4R_FI_CAN_RCLPBAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ESTIMATED BATTERY RESISTANCE (BATTERY SENSOR):<br>
+Estimated Battery Resistance (Battery Sensor)<br>
+</p>
+<p>The estimated battery internal resistance from battery sensor.</p>
+<p>
+In the idling stop vehicle,<br>
+it has become one of the conditions that the value indicated by the parameter shifts to the idling stop.<br>
+However, conditions vary by vehicle. <br>
+</p>
+
+<p class="mnemonic">4R_FI_CAN_SVO2DI</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+HO2S S2 OUTPUT VOLTAGE<br>
+HO2S S2 Output Voltage<br>
+(V)</p>
+<p>It means the output voltage for ground failure detection of the heated oxygen sensor installed after catalyst.<br>
+<br>
+This parameter relates to P0137.<br>
+If this parameter keeps to indicate less than specific value (for example: 1.15V @ 10M ACURA MDX), the vehicle will detect P0137.</p>
+<p><img border="0" class="lazy" data-original="Images/4R_FI_SVO2DI.JPG" width="280" height="190"></p>
+<p>
+A: ECM/PCM<br>
+B: REAR SECONDARY HO2S (SENSOR2)<br> 
+C: HO2S S2 OUTPUT VOLTAGE<br>
+D: HO2S S2<br>
+E: Vcc<br>
+F: SHO2S<br>
+G: SHO2SG</p>
+
+<p class="mnemonic">4R_FI_CAN_TPBAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+ESTIMATED BATTERY TEMPERATURE:<br>
+Estimated Battery Temperature (Battery Sensor)<br>
+(°C)(°F)</p>
+<p>The estimated battery fluid temperature from battery sensor.</p>
+<p>
+In the idling stop vehicle,<br>
+it has become one of the conditions that the value indicated by the parameter shifts to the idling stop.<br>
+However, conditions vary by vehicle. <br>
+</p>
+
+<p class="mnemonic">4R_FI_CAN_KTHC_B</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p>DBW STUCK RATIO:<br>
+OPERATION RANGE: 0% - 100%</p>
+<p>This parameter displays electronic DBW throttle carbon clogging ratio 
+calculated by ECU.<br>
+It is concerned with Throttle Position Learning. <br>
+There is a risk to cause wrong detection for PCV monitor if this parameter shows nearly 100%.<br>
+That's because it causes the difference between Throttle Position learning value and actual Throttle position.<br>
+If it shows nearly 100%, you can check whether to clean throttle body or not with following methods.<br>
+<ul>
+<li>Service Manual</li>
+<dl>
+<dt>Carbon Accumulation Check in Throttle Body Test</dt>
+</dl>
+<li>HDS PGM-FI system</li>
+<dl>
+<dt>TP LEARNING CHECK in the ETCS TEST</dt>
+</dl>
+</ul>
+<br>
+NOTE: Pay attention following case.<br>
+<ol>
+<li><u>After Throttle Body Cleaning, you do not reset TP learning value:</u><br>
+There is a risk to make idling engine speed up to maximum 300 rpm.<br>
+Reset it with TP LEARNING CHECK in the ETCS TEST, PGM-FI system.</li>
+<li><u>It shows nearly 100%, and you do not clean Throttle Body after the reset with HDS:</u><br>
+Engine might be started, but there is a risk to cause imperfect combustion.<br>
+Refer to Service Manual and clean throttle body.</li>
+</ol>
+</p>
+
+<p class="mnemonic">4R_FI_IALSTAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+IDLE LEARN :<br>
+Idle Learn<br>
+(Completed) (Not completed) (Learning)<br>
+(N/A: Not applicable)</p>
+<p>This indicates whether the idle learn completed<br>
+<p>Note: "N/A" indicates that this parameter is not available for this vehicle.<br>
+All vehicles have the capability for idle learning.</p>
+
+</body>
+</html>
