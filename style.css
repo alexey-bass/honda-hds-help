@@ -8,7 +8,12 @@ P.mnemonic
 {
     MARGIN-BOTTOM: 0px;
     font: 8pt "Arial";
-    text-align: right
+    text-align: right;
+	border-top: 1px solid #666;
+}
+
+P.mnemonic:first-child {
+	border-top: none;
 }
 
 /* Background color: White (default), Font color: Black */
