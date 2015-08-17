@@ -12,6 +12,11 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="jquery.lazyload-1.9.5.min.js"></script>
+
+<style>
+    #toc ul li { cursor: pointer; }
+    #toc ul li:hover { text-decoration: underline; }
+</style>
 <script>
 $(function() {
     $("img.lazy").lazyload();
@@ -30,7 +35,6 @@ $(function() {
     $('body').prepend('<div id="toc" style="position: absolute; top: 0; left: -50px; font-size: 10pt;">'+ html +'</div>');
     $('body').css('margin-left', '450px');    
 });
-
 </script>
 </head>
 
