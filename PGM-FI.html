@@ -15,23 +15,22 @@
 <script>
 $(function() {
     $("img.lazy").lazyload();
+    
+    // make TOC
+    var html = '<ul>';
+    $('p.mnemonic').each(function(i, mnemonic) {
+        mnemonic = $(mnemonic);
+        var offset = mnemonic.offset();
+        var p = $(mnemonic.next().next()[0]);
+        var t = $.trim(p.text()).split("\n");
+        var m = t[0].match(/([^:]+)/);
+        html+= '<li onclick="$(\'body\').scrollTop('+ offset.top +');">'+ m[1] +'</li>';
+    });
+    html+= '</ul>';
+    $('body').prepend('<div id="toc" style="position: absolute; top: 0; left: 0; font-size: 10pt;">'+ html +'</div>');
+    $('body').css('margin-left', '450px;');    
 });
 
-// make TOC
-var html = '<ul>';
-$('p.mnemonic').each(function(i, mnemonic) {
-  mnemonic = $(mnemonic);
-  var offset = mnemonic.offset();
-  var p = $(mnemonic.next().next()[0]);
-  var t = $.trim(p.text()).split("\n");
-  var m = t[0].match(/([^:]+)/);
-
-  
-  html+= '<li onclick="$(\'body\').scrollTop('+ offset.top +');">'+ m[1] +'</li>';
-});
-html+= '</ul>';
-$('body').prepend('<div id="toc" style="position: absolute; top: 0; left: 0; font-size: 10pt;">'+ html +'</div>');
-$('body').css('margin-left', '450px;');
 </script>
 </head>
 
