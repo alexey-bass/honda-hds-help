@@ -1,0 +1,1375 @@
+<html>
+	<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../help.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="../jquery.lazyload-1.9.5.min.js"></script>
+	<script src="../help.js"></script>
+</head>
+<body>
+
+<p class="mnemonic">4R_CANEAT_VSP</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Vehicle Speed<br>
+(km/h) (MPH)</p>
+<p>Vehicle Speed indicates the same value as the Output Shaft (Countershaft) speed.</p>
+
+<p class="mnemonic">4R_CANEAT_VNC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Output Shaft (Countershaft) Speed<br>
+(km/h) (MPH)</p>
+<p>Output Shaft (Counter Shaft) Speed is converted from the Output Shaft (Countershaft) 
+speed sensor.<br>
+The countershaft speed sensor is attached to the outside of the transmission housing.<br>
+The countershaft speed sensor generates a pulsing signal according to the speed of the 
+park gear on the countershaft.<br>
+Using that signal, the powertrain control module (PCM/TCM) determines the speed of the 
+countershaft. If pulse dropouts occur with the countershaft rotating, the PCM/TCM detects 
+a malfunction that may be caused by an open, a temporary open, or a short to ground.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_VNC_and_so_on.gif" width="350" height="350"></p>
+<p>A: Output Shaft (Countershaft) speed sensor<br>
+B: PCM/TCM<br>
+C: VCC (Power supply of speed sensor)<br>
+D: NC (Speed sensor signal)</p>
+
+<p class="mnemonic">4R_CANEAT_VNM</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Input Shaft (Mainshaft) Speed<br>
+(km/h) (MPH)</p>
+<p>Mainshaft speed is converted from the Input Shaft (Mainshaft) speed sensor.<br>
+The mainshaft speed sensor is attached to the outside of the transmission housing.<br>
+The mainshaft speed sensor generates a pulsing signal according to the speed of the 
+mainshaft idler gear on the mainshaft. Using that signal, the powertrain control module 
+(PCM/TCM) determines the speed of the mainshaft.<br>
+If no pulses occur with the mainshaft rotating, the PCM/TCM detects a mal-function that 
+may be caused by an open, a temporary open, or a short to ground.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_VNC_and_so_on.gif" width="350" height="350"></p>
+<p>A: Input Shaft (Mainshaft) speed sensor<br>
+B: PCM/TCM<br>
+C: VCC (Power supply of speed sensor)<br>
+D: NM (Speed sensor signal)</p>
+
+<p class="mnemonic">4R_CANEAT_NEW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Engine Speed<br>
+(RPM)</p>
+<p>Engine speed is converted from CKP sensor.<br>
+The value of each 1RPM is displayed.</p>
+
+<p class="mnemonic">4R_CANEAT_NCW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Output Shaft (Countershaft) Speed (rpm)<br>
+(RPM)</p>
+<p>Countershaft speed is converted from the Output Shaft (Countershaft) speed sensor.<br>
+The countershaft speed sensor is attached to the outside of the transmission housing.<br>
+The countershaft speed sensor generates a pulsing signal according to the speed of the 
+park gear on the countershaft.<br>
+Using that signal, the powertrain control module (PCM/TCM) determines the speed of the 
+countershaft. If pulse dropouts occur with the countershaft rotating, the PCM/TCM detects 
+a malfunction that may be caused by an open, a temporary open, or a short to ground.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_VNC_and_so_on.gif" border="0" width="350" height="350"></p>
+<p>A: Output Shaft (Countershaft) speed sensor<br>
+B: PCM/TCM<br>
+C: VCC(Power supply of speed sensor)<br>
+D: NC(Speed sensor signal)</p>
+
+<p class="mnemonic">4R_CANEAT_NMW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Input Shaft (Mainshaft) Speed<br>
+(rpm)</p>
+<p>Mainshaft speed is converted from the Input Shaft (Mainshaft) speed sensor.<br>
+The mainshaft speed sensor is attached to the outside of the transmission housing.<br>
+The mainshaft speed sensor generates a pulsing signal according to the speed of the 
+mainshaft idler gear on the mainshaft. Using that signal, the powertrain control module 
+(PCM/TCM) determines the speed of the mainshaft.<br>
+If no pulses occur with the mainshaft rotating, the PCM/TCM detects a mal-function that 
+may be caused by an open, a temporary open, or a short to ground.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_VNC_and_so_on.gif" border="0" width="350" height="350"></p>
+<p>A: Input Shaft (Mainshaft) speed sensor<br>
+B: PCM/TCM<br>
+C: VCC (Power supply of speed sensor)<br>
+D: NM (Speed sensor signal)</p>
+
+<p class="mnemonic">4R_CANEAT_RELTH</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Relative TP Sensor: Relative Throttle Position Sensor<br>
+(%)</p>
+<p>It displays the relative throttle opening value as calculated by the PCM/TCM.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_RELTH.gif" border="0" width="350" height="350"></p>
+<p>A: Default position (When IG SW is on)<br>
+B: Fully closed position (0%)</p>
+
+<p class="mnemonic">4R_CANEAT_THAD1</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>TP Sensor (1): Throttle Position Sensor (1)<br>
+(V)</p>
+<p>The voltage value of Throttle Position Sensor (1) is indicated.</p>
+<p>Throttle sensor is connected to the throttle valve shaft.<br>
+It detects throttle valve position as the resistance value, converts it into the voltage, 
+and sends the signal to the control unit to enrich the mixture at acceleration, to perform 
+the fuel-cut at deceleration and to A/T control etc.<br>
+When the throttle is fully closed, the position voltage is the lowest, and as the throttle 
+opens, the voltage becomes higher.<br>
+The computer converts the voltage value into throttle position, and detects throttle 
+position status.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_TH.gif" width="350" height="350"></p>
+<p>Fig: Throttle position sensor. Opening angle voltage characteristics<br>
+Y: V<br>
+X: deg<br>
+i: Fully closed<br>
+ii: Fully open</p>
+<p><br>
+</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_TH2.gif" width="350" height="350"></p>
+<p>i: Sensor<br>
+ii: VCC<br>
+iii: TH<br>
+iv: SG<br>
+v: ECU<br>
+vi: Reference voltage circuit<br>
+vii: Computer</p>
+
+<p class="mnemonic">4R_CANEAT_THAD2</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>TP Sensor (2): Throttle Position Sensor 2<br>
+(V)</p>
+<p>The voltage value of Throttle Position Sensor 2 is indicated.</p>
+<p>TP SENSOR (2) is indicated only in the vehicle with two Throttle Position Sensor.<br>
+Throttle sensor 2 is connected to the throttle valve shaft.<br>
+It detects throttle valve position as the resistance value, converts it into the voltage, 
+and sends the signal to the control unit to enrich the mixture at acceleration, to perform 
+the fuel-cut at deceleration and to A/T control etc.<br>
+When the throttle is fully closed, the position voltage is the lowest, and as the throttle 
+opens, the voltage becomes higher.<br>
+The computer converts the voltage value into throttle position, and detects throttle 
+position status.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_TH.gif" width="350" height="350"></p>
+<p>Fig: Throttle position sensor. Opening angle voltage characteristics<br>
+Y: V<br>
+X: deg<br>
+i: Fully closed<br>
+ii: Fully open</p>
+<p><br>
+</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_TH2.gif" width="350" height="350"></p>
+<p>i: Sensor<br>
+ii: VCC<br>
+iii: TH<br>
+iv: SG<br>
+v: ECU<br>
+vi: Reference voltage circuit<br>
+vii: Computer</p>
+
+<p class="mnemonic">4R_CANEAT_APSAT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>APP Sensor (%): Accelerator Pedal Position Sensor<br>
+(%)</p>
+<p>Percentage at Accelerator position calculated from value of two accelerator pedal 
+position sensor (APP SENSOR A and APP SENSOR B).</p>
+
+<p class="mnemonic">4R_CANEAT_APS1AD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>APP Sensor A (V): Accelerator Pedal Position Sensor A Signal Voltage (V)</p>
+<p>A potentiometer connected to the accelerator pedal cable.<br>
+This indicates the voltage value about twice APP sensor B.<br>
+Voltage of accelerator Pedal Position Sensor 1(A).</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_AP_SENSOR_A.gif" border="0" width="350" height="350"></p>
+<p>A: APP SENSOR A<br>
+B: APP SENSOR B<br>
+i: The depressed amount of the accelerator pedal</p>
+
+<p class="mnemonic">4R_CANEAT_APS2AD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>APP Sensor B (V): Accelerator Pedal Position Sensor B Signal Voltage (V)</p>
+<p>A potentiometer connected to the accelerator pedal cable.<br>
+This indicates about half the voltage value of APP sensor A.<br>
+Voltage of accelerator Pedal Position Sensor B.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_AP_SENSOR_B.gif" border="0" width="350" height="350"></p>
+<p>A: APP SENSOR A<br>
+B: APP SENSOR B<br>
+i: The depressed amount of the accelerator pedal</p>
+
+<p class="mnemonic">4R_CANEAT_TWAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>ECT Sensor (V): Engine Coolant Temperature Sensor (V)</p>
+<p>The voltage value of ECT sensor is indicated.</p>
+<p>The engine coolant temperature sensor detects the fluctuation of engine coolant 
+temperature by the fluctuation of the resistance of thermistor.<br>
+The PCM/TCM supplies voltage to the engine coolant temperature (ECT) signal circuit (about 
+5 V) through a pull-up resistor.<br>
+As the engine coolant cools, the ECT sensor resistance increases, and the PCM/TCM detects 
+a high signal voltage.<br>
+As the engine coolant warms, the ECT sensor resistance decreases, and the PCM/TCM detects 
+a low signal voltage.<br>
+This signal (voltage) is used for the control of the lock upping clutch etc.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_TW.gif" border="0" width="348" height="348"></p>
+<p>Fig: Temp resistance characteristics<br>
+Y: kΩ<br>
+X: °C</p>
+
+<p class="mnemonic">4R_CANEAT_TW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Engine Coolant Temperature<br>
+(°C) (°F)</p>
+<p>Engine Coolant Temperature indicates the temperature value which TCM/PCM converted 
+based on the voltage value of the ECT sensor.</p>
+<p>The engine coolant temperature sensor detects the fluctuation of engine coolant 
+temperature by the fluctuation of the resistance of thermistor.<br>
+The PCM/TCM supplies voltage to the engine coolant temperature (ECT) signal circuit (about 
+5 V) through a pull-up resistor.<br>
+As the engine coolant cools, the ECT sensor resistance increases, and the PCM/TCM detects 
+a high signal voltage.<br>
+As the engine coolant warms, the ECT sensor resistance decreases, and the PCM/TCM detects 
+a low signal voltage.<br>
+This signal (voltage) is used for the control of the lock upping clutch etc.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_TW.gif" border="0" width="348" height="348"></p>
+<p>Fig: Temp resistance characteristics<br>
+Y: kΩ<br>
+X: °C</p>
+
+<p class="mnemonic">4R_CANEAT_PBAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>MAP Sensor (V): Manifold Absolute Pressure Sensor<br>
+(V)</p>
+<p>The voltage value of MAP sensor is indicated.</p>
+<p>The manifold absolute pressure (MAP) sensor senses manifold absolute pressure (vacuum) 
+and converts it into electrical signals (voltage).<br>
+The MAP sensor outputs low signal voltage at high-vacuum (throttle valve closed) and high 
+signal voltage at low-vacuum (throttle valve wide open).<br>
+The MAP sensor outputs low signal voltage at high-vacuum (throttle valve closed) and high 
+signal voltage at low-vacuum (throttle valve wide open).</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_PB.gif" border="0" width="350" height="350"></p>
+<p>A: MAP SENSOR<br>
+B: PCM/TCM<br>
+D: MAP<br>
+E: SG</p>
+
+<p class="mnemonic">4R_CANEAT_PB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Manifold Absolute Pressure<br>
+(Pa) (KPa) (MPa) (mmHg) (inHg) (kgf/cm<sup>2</sup>) (psi)</p>
+<p>Manifold Absolute Pressure indicates the pressure value which TCM/PCM converted based 
+on the voltage value of the MAP sensor.</p>
+<p>The manifold absolute pressure (MAP) sensor senses manifold absolute pressure (vacuum) 
+and converts it into electrical signals (voltage).<br>
+The MAP sensor outputs low signal voltage at high-vacuum (throttle valve closed) and high 
+signal voltage at low-vacuum (throttle valve wide open).</p>
+<p>OPERATING RANGE (IDLE)<br>
+210mmHg - 310mmHg<br>
+28KPa - 41KPa<br>
+8inHg - 12inHg<br>
+Possible Variance: ±27mmHg/1.1inHg/3.6KPa</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_PB.gif" border="0" width="350" height="350"></p>
+<p>A: MAP SENSOR<br>
+B: PCM/TCM<br>
+D: MAP<br>
+E: SG</p>
+
+<p class="mnemonic">4R_CANEAT_PAAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>BARO Sensor (V): Barometric Pressure Sensor voltage<br>
+(V)<br>
+(N/A: Not equipped)</p>
+<p>The voltage value of BARO sensor is indicated.</p>
+<p>The barometric pressure (BARO) sensor is built into the powertrain control module 
+(PCM/TCM) and monitors atmospheric pressure.<br>
+The barometric pressure (BARO) sensor outputs low signal voltage at a low barometric 
+pressure, and high signal voltage at a high barometric pressure.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_PA.gif" border="0" width="350" height="350"></p>
+<p>Fig: Barometric Pressure (BARO) Sensor Output Voltage<br>
+A: Barometric Pressure<br>
+B: Low (High Altitude)<br>
+C: High (Low Altitude)<br>
+D: Sensor Voltage (V)</p>
+
+<p class="mnemonic">4R_CANEAT_PA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Atmospheric Pressure <br>
+(Pa) (kPa) (MPa) (kgf/cm<sup>2</sup>) (mmHg) (inHg) (psi)<br>
+(N/A: Not equipped)</p>
+<p>Atmospheric Pressure indicates the pressure value which TCM/PCM converted based on the 
+voltage value of the BARO sensor.</p>
+<p>The barometric pressure (BARO) sensor is built into the powertrain control module 
+(PCM/TCM) and monitors atmospheric pressure.<br>
+The barometric pressure (BARO) sensor outputs low signal voltage at a low barometric 
+pressure, and high signal voltage at a high barometric pressure.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_PA.gif" border="0" width="350" height="350"></p>
+<p>Fig: Barometic Pressure (BARO) Sensor Output Voltage<br>
+A: Barometic Pressure<br>
+B: Low (High Altitude)<br>
+C: High (Low Altitude)<br>
+D: Sensor Voltage (V)</p>
+
+<p class="mnemonic">4R_CANEAT_TATFAD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>ATF Temp Sensor (V): Automatic Transmission Fluid Temperature Sensor voltage<br>
+(V)</p>
+<p>The voltage value of ATF Temp sensor is indicated.</p>
+<p>The ATF temperature sensor is a thermistor type sensor whose resistance changes 
+according to the change in ATF temperature.<br>
+The PCM/ TCM sends a 5V standard voltage to the grounded sensor through a pull-up 
+resistor.<br>
+When the ATF temperature is low, the sensor resistance increases and the PCM/ TCM detects 
+a high signal voltage.<br>
+As the ATF temperature rises, the sensor resistance decreases and the PCM/TCM detects a 
+low signal voltage.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_TATF_and_TFT.gif" border="0" width="346" height="346"></p>
+<p>A: Automatic Transmission Fluid Temperature Sensor<br>
+B: Input Circuit<br>
+C: Signal<br>
+D: PCM/TCM</p>
+<p>OPERATING RANGE<br>
+-30°C - 140°C<br>
+-22°F - 284°F<br>
+4.77V - 0.28V</p>
+
+<p class="mnemonic">4R_CANEAT_TATF</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>ATF Temperature: Automatic Transmission Fluid Temperature <br>
+(°C)(°F)</p>
+<p>ATF Temperature indicates the temperature value which TCM/PCM converted based on the 
+voltage value of the ATF Temperature sensor.</p>
+<p>The ATF temperature sensor is a thermistor type sensor whose resistance changes 
+according to the change in ATF temperature.<br>
+The PCM/ TCM sends a 5V standard voltage to the grounded sensor through a pull-up 
+resistor.<br>
+When the ATF temperature is low, the sensor resistance increases and the PCM/ TCM detects 
+a high signal voltage.<br>
+As the ATF temperature rises, the sensor resistance decreases and the PCM/TCM detects a 
+low signal voltage.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_TATF_and_TFT.gif" border="0" width="346" height="346"></p>
+<p>A: Automatic Transmission Fluid Temperature Sensor<br>
+B: Input Circuit<br>
+C: Signal<br>
+D: PCM/TCM</p>
+<p>OPERATING RANGE<br>
+-30°C - 140°C<br>
+-22°F - 284°F<br>
+4.77V - 0.28V</p>
+
+<p class="mnemonic">4R_CANEAT_VB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Battery Voltage<br>
+(V)</p>
+<p>Battery Voltage indicates the battery voltage.<br>
+It is a power-supply voltage of the solenoid valve.</p>
+
+<p class="mnemonic">4R_CANEAT_SO</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Shift Control<br>
+(N/P, Park, R, 1st, 2nd, 3rd, 4th, 5th, 6th, 7th, 8th, 9th, Undefined) </p>
+<p>The shift that the PCM/TCM intends to control the automatic transmission.<br>
+(Shift Control indicate correct values when the engine is running)</p>
+
+<p class="mnemonic">4R_CANEAT_SHA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T Shift Sol VLV. A: Automatic Transmission Shift Solenoid Valve A<br>
+(ON/OFF)</p>
+<p>When the solenoid valve is activated, the fluid line is changed. And the A/T SHIFT SOL 
+VLV. A indicates ON.<br>
+The hydraulic pressure circuit supplies/discharges hydraulic pressure to/from each clutch 
+according to the combination of the ON/OFF status of shift solenoid valves.<br>
+The combination of ON/OFF status of each shift solenoid valve at each shift position is 
+various in the model.<br>
+There are some models which work shift solenoid valve A as a torque converter clutch 
+solenoid valve.<br>
+The PCM/TCM commands the driver circuit to turn on the shift solenoid valve.<br>
+The circuit diagnoses malfunctions such as a circuit short or open, and sends back a 
+return signal during the PCM/TCM&#39;s command.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_SHA_to_SHE.gif" border="0" width="350" height="350"></p>
+<p>A: Shift Solenoid valve<br>
+B: Driver Circuit<br>
+C: PCM/TCM<br>
+D: Command<br>
+E: Return Signal</p>
+
+<p class="mnemonic">4R_CANEAT_SHB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T Shift Sol VLV. B: Automatic Transmission Shift Solenoid Valve B<br>
+(ON/OFF)</p>
+<p>When the solenoid valve is activated, the fluid line is changed. And the A/T SHIFT SOL 
+VLV. B indicates ON.<br>
+The hydraulic pressure circuit supplies/discharges hydraulic pressure to/from each clutch 
+according to the combination of the ON/OFF status of shift solenoid valves.<br>
+The combination of ON/OFF status of each shift solenoid valve at each shift position is 
+various in the model.<br>
+The PCM/TCM commands the driver circuit to turn on the shift solenoid valve.<br>
+The circuit diagnoses malfunctions such as a circuit short or open, and sends back a 
+return signal during the PCM/TCM&#39;s command.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_SHA_to_SHE.gif" border="0" width="350" height="350"></p>
+<p>A: Shift Solenoid valve<br>
+B: Driver Circuit<br>
+C: PCM/TCM<br>
+D: Command<br>
+E: Return Signal</p>
+
+<p class="mnemonic">4R_CANEAT_SHC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T Shift Sol VLV. C: Automatic Transmission Shift Solenoid Valve C<br>
+(ON/OFF)</p>
+<p>When the solenoid valve is activated, the fluid line is changed. And the A/T SHIFT SOL 
+VLV. C indicates ON.</p>
+<p>The hydraulic pressure circuit supplies/discharges hydraulic pressure to/from each 
+clutch according to the combination of the ON/OFF status of shift solenoid valves.<br>
+The combination of ON/OFF status of each shift solenoid valve at each shift position is 
+various in the model.<br>
+The PCM/TCM commands the driver circuit to turn on the shift solenoid valve.<br>
+The circuit diagnoses malfunctions such as a circuit short or open, and sends back a 
+return signal during the PCM/TCM&#39;s command.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_SHA_to_SHE.gif" border="0" width="350" height="350"></p>
+<p>A: Shift Solenoid valve<br>
+B: Driver Circuit<br>
+C: PCM/TCM<br>
+D: Command<br>
+E: Return Signal</p>
+
+<p class="mnemonic">4R_CANEAT_SHD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T Shift Sol VLV. D: Automatic Transmission Shift Solenoid Valve D<br>
+(ON/OFF)</p>
+<p>When the solenoid valve is activated, the fluid line is changed. And the A/T SHIFT SOL 
+VLV. D indicates ON.<br>
+The hydraulic pressure circuit supplies/discharges hydraulic pressure to/from each clutch 
+according to the combination of the ON/OFF status of shift solenoid valves.<br>
+The combination of ON/OFF status of each shift solenoid valve at each shift position is 
+various in the model.<br>
+There are some models which work shift solenoid valve D as a torque converter clutch 
+solenoid valve.<br>
+The PCM/TCM commands the driver circuit to turn on the shift solenoid valve.<br>
+The circuit diagnoses malfunctions such as a circuit short or open, and sends back a 
+return signal during the PCM/TCM&#39;s command.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_SHA_to_SHE.gif" border="0" width="350" height="350"></p>
+<p>A: Shift Solenoid valve<br>
+B: Driver Circuit<br>
+C: PCM/TCM<br>
+D: Command<br>
+E: Return Signal</p>
+
+<p class="mnemonic">4R_CANEAT_PLA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Line Pressure Sol VLV. A:<br>
+Line Pressure Solenoid Valve A<br>
+(OFF/ON)</p>
+<p>Line pressure solenoid valve A (PL SOL V.A) controls the hydraulic pressure optimally
+in the hydraulic pressure control system of automatic transmission.<br>
+Line pressure solenoid valve A is closed normally (ON-Open/OFF-Close).
+Solenoid valve hydraulic pressure hole (which is closed normally) is opened when solenoid valve is ON
+and it also makes ATF pass through. Hydraulic pressure hole is closed when solenoid valve is OFF and shut down the oil flow.</p>
+
+<p class="mnemonic">4R_CANEAT_SLS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Shift Lock Solenoid (ON/OFF)</p>
+<p>When the solenoid valve is activated, the shift lock is released. And the SHIFT LOCK 
+SOL indicates ON.<br>
+SHIFT LOCK SOLENOID SYSTEM is a device the shift lever cannot be moved from P position to 
+other positions if the brake pedal is not pressed after the engine starts at P position.<br>
+If the brake pedal is pressed at P position, the shift lock solenoid is turning on, shift 
+lock plunger is retracted to release the shift lock stop. This allows the shift lever to 
+be moved.<br>
+The shift lock solenoid remains OFF, when the brake pedal is released at P position, and 
+the shift lever is without P position.</p>
+
+<p class="mnemonic">4R_CANEAT_ETR</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>ETR: Slip ratio of torque converter .(%)<br>
+An analytical team uses this parameter to solve a difficult problem to diagnose.</p>
+
+<p class="mnemonic">4R_CANEAT_GRATIO</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>AT GEAR RATIO<br>
+</p>
+<p>AT GEAR RATIO is calculation between the main and countershafts to determine the gear ratio. <br>
+The values displayed are the ratios when in and between gears as displayed as an example below:<br>
+  1st gear = 1.000,   1-2 shift = 1.xxx<br>
+  2nd gear = 1.000,   2-3 shift = 2.xxx<br>
+  3rd gear = 1.000,   3-4 shift = 3.xxx<br>
+ 4th gear = 1.000,   4-5 shift = 4.xxx<br>
+ 5th gear = 5.000,   Drive (not moving) = 7.969<br>
+ Reverse (not moving) = 7.969,   Reverse (moving) = 1.xxx<br>
+ Engine stop = 7.969,   Park and Neutral = 0.000<br>
+ Main/countershaft failure = 0.000 or 7.969<br>
+<br>
+This value is 1 - 2 seconds slower than ECU signal of shift changeing (Shift Control). <br>
+<br>
+<p>Example: Shift position is P - R - N<br>
+<img border="0" class="lazy" data-original="../Images/4R_EAT_CAN_GRATIO1.gif" width="350" height="350"></p>
+<p>I: Gear Ratio<br>
+II: Shift control<br>
+III: Engine is stopped<br>
+IV: Vehicle is stopped (R or D)<br>
+</p>
+<br>
+<p>Example2: Shift position is N - D (1 - 2 - 3 - 4 - 5)<br>
+<img border="0" class="lazy" data-original="../Images/4R_EAT_CAN_GRATIO2.gif" width="350" height="350"></p>
+
+<p class="mnemonic">4R_CANEAT_MAPS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>SHIFT MAP NUMBER<br>
+(0,1,2,3,4,5,6,7,)</p>
+<p>SHIFT MAP NUMBER indicates changing the speed data number.<br>
+SHIFT MAP NUMBER indicates identity (ID) number of shift schedule table which is selected 
+to the A/T grade logic control.<br>
+The number of maps and the map number for each mode depend on models.<br>
+When running on a flat road, &quot;3&quot; or &quot;4&quot; is indicated in SHIFT MAP NUMBER.<br>
+At Ascending control, SHIFT MAP NUMBER indicates smaller numerical value than the flat 
+road.<br>
+At Descending control, SHIFT MAP NUMBER indicates larger numerical value than the flat 
+road.<br>
+Even when running in the weight of the driver and passengers or decrease in engine 
+power(running highland, overheating, etc.).</p>
+
+<p class="mnemonic">4R_CANEAT_ICMDA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T C.P.C. Sol VLV. A Command:<br>
+A/T Clutch Pressure Control Solenoid Valve A Command<br>
+(A)</p>
+<p>Calculated current value that PCM/TCM directs to A/T Clutch Pressure Control Solenoid 
+Valve A. Clutch pressure control solenoid valve A is used for clutch pressure control. A 
+spool in clutch pressure control solenoid valve A pushes a valve according to the duty 
+cycle that is controlled by the power train control module (PCM/TCM) to pressurize fluid 
+so the hydraulic pressure is proportional to the current. The PCM/TCM measures the current 
+flowing through clutch pressure control solenoid valve A and uses feedback control to 
+compensate the difference between the actual current and the commanded one.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C.gif" border="0" width="348" height="348">
+</p>
+<p>A: Command<br>
+B: Driver Circuit<br>
+C: Clutch Pressure Control Solenoid Valve<br>
+D: Current Sensing Circuit<br>
+E: Sensing Current<br>
+F: Cut Off Command<br>
+G: Cut Off Circuit<br>
+H: PCM/TCM</p>
+<p><br>
+</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C2.gif" border="0" width="348" height="348">
+</p>
+<p>A: Cut Off Command<br>
+B: Cut Off Circuit<br>
+C: Command<br>
+D: Driver Circuit<br>
+E: Clutch Pressure Control Solenoid Valve<br>
+F: Current Sensing Circuit<br>
+G: Sensing Current<br>
+H: PCM/TCM</p>
+
+<p class="mnemonic">4R_CANEAT_IACTA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T C.P.C. Sol VLV. A Actual:<br>
+A/T Clutch Pressure Control Solenoid Valve A Actual<br>
+(A)</p>
+<p>Actual current value of A/T Clutch Pressure Control Solenoid Valve A.<br>
+Clutch pressure control solenoid valve A is used for clutch pressure control. A spool in 
+clutch pressure control solenoid valve A pushes a valve according to the duty cycle that 
+is controlled by the power train control module (PCM/TCM) to pressurize fluid so the 
+hydraulic pressure is proportional to the current. The PCM/TCM measures the current 
+flowing through clutch pressure control solenoid valve A and uses feedback control to 
+compensate the difference between the actual current and the commanded one.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C.gif" border="0" width="348" height="348">
+</p>
+<p>A: Command<br>
+B: Driver Circuit<br>
+C: Clutch Pressure Control Solenoid Valve<br>
+D: Current Sensing Circuit<br>
+E: Sensing Current<br>
+F: Cut Off Command<br>
+G: Cut Off Circuit<br>
+H: PCM/TCM</p>
+<p><br>
+</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C2.gif" border="0" width="348" height="348">
+</p>
+<p>A: Cut Off Command<br>
+B: Cut Off Circuit<br>
+C: Command<br>
+D: Driver Circuit<br>
+E: Clutch Pressure Control Solenoid Valve<br>
+F: Current Sensing Circuit<br>
+G: Sensing Current<br>
+H: PCM/TCM</p>
+<p class="mnemonic">4R_CANEAT_ICMDB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T C.P.C. Sol VLV. B Command:<br>
+A/T Clutch Pressure Control Solenoid Valve B Command<br>
+(A)</p>
+<p>Calculated current value that PCM/TCM directs to A/T Clutch Pressure Control Solenoid 
+Valve B.<br>
+Clutch pressure control solenoid valve B is used for clutch pressure control. A spool in 
+clutch pressure control solenoid valve B pushes a valve according to the duty cycle that 
+is controlled by the power train control module (PCM/TCM) to pressurize fluid so the 
+hydraulic pressure is proportional to the current. The PCM/TCM measures the current 
+flowing through clutch pressure control solenoid valve B and uses feedback control to 
+compensate the difference between the actual current and the commanded one.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C.gif" border="0" width="348" height="348">
+</p>
+<p>A: Command<br>
+B: Driver Circuit<br>
+C: Clutch Pressure Control Solenoid Valve<br>
+D: Current Sensing Circuit<br>
+E: Sensing Current<br>
+F: Cut Off Command<br>
+G: Cut Off Circuit<br>
+H: PCM/TCM</p>
+<p><br>
+</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C2.gif" border="0" width="348" height="348">
+</p>
+<p>A: Cut Off Command<br>
+B: Cut Off Circuit<br>
+C: Command<br>
+D: Driver Circuit<br>
+E: Clutch Pressure Control Solenoid Valve<br>
+F: Current Sensing Circuit<br>
+G: Sensing Current<br>
+H: PCM/TCM</p>
+
+<p class="mnemonic">4R_CANEAT_IACTB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T C.P.C. Sol VLV. B Actual:<br>
+A/T Clutch Pressure Control Solenoid Valve B Actual<br>
+(A)</p>
+<p>Actual current value of A/T Clutch Pressure Control Solenoid Valve B.<br>
+Clutch pressure control solenoid valve B is used for clutch pressure control. A spool in 
+clutch pressure control solenoid valve B pushes a valve according to the duty cycle that 
+is controlled by the power train control module (PCM/TCM) to pressurize fluid so the 
+hydraulic pressure is proportional to the current. The PCM/TCM measures the current 
+flowing through clutch pressure control solenoid valve B and uses feedback control to 
+compensate the difference between the actual current and the commanded one.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C.gif" border="0" width="348" height="348">
+</p>
+<p>A: Command<br>
+B: Driver Circuit<br>
+C: Clutch Pressure Control Solenoid Valve<br>
+D: Current Sensing Circuit<br>
+E: Sensing Current<br>
+F: Cut Off Command<br>
+G: Cut Off Circuit<br>
+H: PCM/TCM</p>
+<p><br>
+</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C2.gif" border="0" width="348" height="348">
+</p>
+<p>A: Cut Off Command<br>
+B: Cut Off Circuit<br>
+C: Command<br>
+D: Driver Circuit<br>
+E: Clutch Pressure Control Solenoid Valve<br>
+F: Current Sensing Circuit<br>
+G: Sensing Current<br>
+H: PCM/TCM</p>
+
+<p class="mnemonic">4R_CANEAT_ICMDC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T C.P.C. Sol VLV. C Command:<br>
+A/T Clutch Pressure Control Solenoid Valve C Command<br>
+(A)</p>
+<p>Calculated current value that PCM/TCM directs to A/T Clutch Pressure Control Solenoid 
+Valve C. Clutch pressure control solenoid valve C is used for clutch pressure control. A 
+spool in clutch pressure control solenoid valve C pushes a valve according to the duty 
+cycle that is controlled by the power train control module (PCM/TCM) to pressurize fluid 
+so the hydraulic pressure is proportional to the current. The PCM/TCM measures the current 
+flowing through clutch pressure control solenoid valve C and uses feedback control to 
+compensate the difference between the actual current and the commanded one.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C.gif" border="0" width="348" height="348">
+</p>
+<p>A: Command<br>
+B: Driver Circuit<br>
+C: Clutch Pressure Control Solenoid Valve<br>
+D: Current Sensing Circuit<br>
+E: Sensing Current<br>
+F: Cut Off Command<br>
+G: Cut Off Circuit<br>
+H: PCM/TCM</p>
+<p><br>
+</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C2.gif" border="0" width="348" height="348">
+</p>
+<p>A: Cut Off Command<br>
+B: Cut Off Circuit<br>
+C: Command<br>
+D: Driver Circuit<br>
+E: Clutch Pressure Control Solenoid Valve<br>
+F: Current Sensing Circuit<br>
+G: Sensing Current<br>
+H: PCM/TCM</p>
+
+<p class="mnemonic">4R_CANEAT_IACTC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T C.P.C. Sol VLV. C Actual:<br>
+A/T Clutch Pressure Control Solenoid Valve C Actual<br>
+(A)</p>
+<p>Actual current value of A/T Clutch Pressure Control Solenoid Valve C.<br>
+Clutch pressure control solenoid valve C is used for clutch pressure control. A spool in 
+clutch pressure control solenoid valve C pushes a valve according to the duty cycle that 
+is controlled by the power train control module (PCM/TCM) to pressurize fluid so the 
+hydraulic pressure is proportional to the current. The PCM/TCM measures the current 
+flowing through clutch pressure control solenoid valve C and uses feedback control to 
+compensate the difference between the actual current and the commanded one.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C.gif" border="0" width="348" height="348">
+</p>
+<p>A: Command<br>
+B: Driver Circuit<br>
+C: Clutch Pressure Control Solenoid Valve<br>
+D: Current Sensing Circuit<br>
+E: Sensing Current<br>
+F: Cut Off Command<br>
+G: Cut Off Circuit<br>
+H: PCM/TCM</p>
+<p><br>
+</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_IACT_and_CMD_A_to_C2.gif" border="0" width="348" height="348">
+</p>
+<p>A: Cut Off Command<br>
+B: Cut Off Circuit<br>
+C: Command<br>
+D: Driver Circuit<br>
+E: Clutch Pressure Control Solenoid Valve<br>
+F: Current Sensing Circuit<br>
+G: Sensing Current<br>
+H: PCM/TCM</p>
+
+<p class="mnemonic">4R_CANEAT_ATPP</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T P Switch: A/T P position switch<br>
+(ON/OFF)</p>
+<p>When the shift lever is shifted to the &quot;P&quot; position, the A/T P SWITCH indicates ON.<br>
+PCM/ TCM reads the gear lever position by the signal of the transmission range switch as 
+mounting to side cover of the transmission.<br>
+The transmission range switch is attached to the control shaft. Operation of the shift 
+lever makes the control shaft rotate via the shift cable. The A/T gear position indicator 
+indicates which position is selected according to the signal Low/High combinations which 
+vary based on shift lever position.<br>
+The voltage is 5-12 V (Differs by the pull up voltage) (High) at the PCM/ TCM input 
+terminal when each transmission range switch position is open, and it is 0 V (Low) when 
+each switch is closed.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_ATP_SHIFT_SW.gif" border="0" width="350" height="350"></p>
+<p>The combination of the positions is different in the model.<br>
+A: PCM/TCM<br>
+B: Transmission Range switch</p>
+
+<p class="mnemonic">4R_CANEAT_ATPR</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T R Switch: A/T Reverse Position Switch<br>
+(ON/OFF)</p>
+<p>When the A/T shift lever is shifted to the R position, the A/T R SWITCH indicates ON<br>
+PCM/ TCM reads the gear lever position by the signal of the transmission range switch as 
+mounting to side cover of the transmission.<br>
+The transmission range switch is attached to the control shaft. Operation of the shift 
+lever makes the control shaft rotate via the shift cable. The A/T gear position indicator 
+indicates which position is selected according to the signal Low/High combinations which 
+vary based on shift lever position.<br>
+The voltage is 5-12 V (Differs by the pull up voltage) (High) at the PCM/ TCM input 
+terminal when each transmission range switch position is open, and it is 0 V (Low) when 
+each switch is closed.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_ATP_SHIFT_SW.gif" border="0" width="350" height="350"></p>
+<p>The combination of the positions is different in the model.<br>
+A: PCM/TCM<br>
+B: Transmission Range switch</p>
+
+<p class="mnemonic">4R_CANEAT_ATPN</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T N Switch: A/T N Position Switch<br>
+(ON/OFF)</p>
+<p>When the A/T shift lever is shifted to the &quot;N&quot; position, the A/T N SWITCH indicates ON.<br>
+PCM/ TCM reads the gear lever position by the signal of the transmission range switch as 
+mounting to side cover of the transmission.<br>
+The transmission range switch is attached to the control shaft. Operation of the shift 
+lever makes the control shaft rotate via the shift cable. The A/T gear position indicator 
+indicates which position is selected according to the signal Low/High combinations which 
+vary based on shift lever position.<br>
+The voltage is 5-12 V (Differs by the pull up voltage) (High) at the PCM/ TCM input 
+terminal when each transmission range switch position is open, and it is 0 V (Low) when 
+each switch is closed.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_ATP_SHIFT_SW.gif" border="0" width="350" height="350"></p>
+<p>The combination of the positions is different in the model.<br>
+A: PCM/TCM<br>
+B: Transmission Range switch</p>
+
+<p class="mnemonic">4R_CANEAT_ATPD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T D Switch: A/T D Position Switch<br>
+(ON/OFF)</p>
+<p>When the A/T shift lever is shifted to the &quot;D&quot; position, the A/T D SWITCH indicates ON.<br>
+PCM/ TCM reads the gear lever position by the signal of the transmission range switch as 
+mounting to side cover of the transmission.<br>
+The transmission range switch is attached to the control shaft. Operation of the shift 
+lever makes the control shaft rotate via the shift cable. The A/T gear position indicator 
+indicates which position is selected according to the signal Low/High combinations which 
+vary based on shift lever position.<br>
+The voltage is 5-12 V (Differs by the pull up voltage) (High) at the PCM/ TCM input 
+terminal when each transmission range switch position is open, and it is 0 V (Low) when 
+each switch is closed.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_ATPD.gif" border="0" width="350" height="350"></p>
+<p>The combination of the positions is different in the model.<br>
+A: PCM/TCM<br>
+B: Transmission Range switch</p>
+
+<p class="mnemonic">4R_CANEAT_ATPS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T S Switch: A/T S Position Switch<br>
+(ON/OFF)</p>
+<p>When the A/T shift lever is shifted to the &quot;S&quot; position, the A/T S SWITCH indicates ON.<br>
+PCM/ TCM reads the gear lever position by the signal of the transmission range switch as 
+mounting to side cover of the transmission.<br>
+The transmission range switch is attached to the control shaft. Operation of the shift 
+lever makes the control shaft rotate via the shift cable. The A/T gear position indicator 
+indicates which position is selected according to the signal Low/High combinations which 
+vary based on shift lever position.<br>
+The voltage is 5-12 V (Differs by the pull up voltage) (High) at the PCM/ TCM input 
+terminal when each transmission range switch position is open, and it is 0 V (Low) when 
+each switch is closed.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_CANEAT_ATPS.gif" width="336" height="350"></p>
+<p>The combination of the positions is different in the model.<br>
+A: Transmission Range switch<br>
+B: PCM/TCM</p>
+
+<p class="mnemonic">4R_CANEAT_ATPFWD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Forward switch (ATPFWD)<br>
+(ON/OFF)</p>
+<p>When the shift lever is shifted to one of forward position, FORWARD SWITCH indicates 
+ON.<br>
+Forward switch is installed in transmission range switch. It&#39;s detects 2 or 3 forward 
+consecutive position from the highest D position.<br>
+(Forward switch can detect the any position between one shift position and the next shift 
+position.)<br>
+If the signal of forward switch can be detected when both position signals cannot be 
+detected by the shift lever&#39;s stopping by incorrect operation of the user etc. in the middle 
+of two forward positions, the PCM/TCM doesn&#39;t detect the malfunction of AT range switch.<br>
+The combination that forward switch can detects depends on the model.</p>
+<p><img class="lazy" data-original="../Images/4R_EAT_ATPFWD.gif" border="0" width="350" height="350"></p>
+<p>The combination of the positions is different in the model.<br>
+A: PCM/TCM<br>
+B: Transmission Range switch<br>
+C: Forward switch</p>
+
+<p class="mnemonic">4R_CANEAT_ATPRVS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Reverse switch (ATPRVS)<br>
+(ON/OFF)</p>
+<p>When the shift lever is shifted to the &quot;R&quot; position, the REVERSE SWITCH indicates ON.<br>
+(There are some models which indicate ON by P or N)<br>
+REVERSE SWITCH (ATPRVS) is a switch preliminary to detect R position.<br>
+If the signal at R position is not found, this A/T vehicle cannot reverse run.<br>
+It is possible to make the vehicle reverse by making the signal at R position two systems 
+(A/T R SW and reverse SW(ATPRVS)) when one of signals are not detected.</p>
+
+<p class="mnemonic">4R_CANEAT_ATINDP</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>P Indicator<br>
+(ON/OFF)</p>
+<p>PCM/TCM outputs the signal to the gauge so that an appropriate gear position may light 
+and display the selected gear position in the gear position indicator or the gauge.<br>
+The signal communicates through a multiple communication or the CAN communication.<br>
+When the P position signal is output, the P INDICATOR indicates ON.</p>
+
+<p class="mnemonic">4R_CANEAT_ATINDR</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>R Indicator<br>
+(ON/OFF)</p>
+<p>PCM/TCM outputs the signal to the gauge so that an appropriate gear position may light 
+and display the selected gear position in the gear position indicator of the gauge.<br>
+The signal communicates through a multiple communication or the CAN communication.<br>
+When the R position signal is output, the R INDICATOR indicates ON.</p>
+
+<p class="mnemonic">4R_CANEAT_ATINDN</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>N Indicator<br>
+(ON/OFF)</p>
+<p>PCM/TCM outputs the signal to the gauge so that an appropriate gear position may light 
+and display the selected gear position in the gear position indicator or the gauge.<br>
+When the N position signal is output, the N INDICATOR indicates ON.</p>
+
+<p class="mnemonic">4R_CANEAT_ATINDD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>D Indicator<br>
+(ON/OFF)</p>
+<p>PCM/TCM outputs the signal to the gauge so that an appropriate gear position may light 
+and display the selected gear position in the gear position indicator of the gauge.<br>
+When the D position signal is output, the D INDICATOR indicates ON.</p>
+
+<p class="mnemonic">4R_CANEAT_ATINDS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>S Indicator<br>
+(ON/OFF)</p>
+<p>PCM/TCM outputs the signal to the gauge so that an appropriate gear position may light 
+and display the selected gear position in the gear position indicator of the gauge.<br>
+When the S position signal is output, the S INDICATOR indicates ON.</p>
+
+<p class="mnemonic">4R_CANEAT_OP2SW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>2nd Pressure Switch<br>
+(ON/OFF)</p>
+<p>Driving in 2nd gear, the 2nd PRESSURE SWITCH indicates ON.<br>
+2nd Pressure Switch (OP2SW) is set up in the hydraulic pressure supply circuit to 2nd 
+clutch.<br>
+When hydraulic pressure is supplied to 2nd clutch, 2nd Pressure Switch(OP2SW) becomes 
+turning on (short to GND).<br>
+When 2nd clutch does not have the hydraulic pressure supply, 2nd Pressure Switch(OP2SW) is 
+turned off (open).<br>
+The signal of 2nd clutch pressure switch is input to the PCM/TCM, and used to reduce the 
+shock which occurs when shifting to 2nd.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_LHSW_PACKET_and_so_on.gif" border="0" width="350" height="350">
+</p>
+<p>A: Signal<br>
+B: Input Circuit<br>
+C: PCM/TCM<br>
+D: 2nd Pressure switch</p>
+
+<p class="mnemonic">4R_CANEAT_OP3SW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>3rd Pressure Switch<br>
+(ON/OFF)</p>
+<p>Driving in 3rd gear, the 3rd PRESSURE SWITCH indicates ON.<br>
+3rd Pressure Switch (OP3SW) is set up in the hydraulic pressure supply circuit to 3rd 
+clutch.<br>
+When hydraulic pressure is supplied to 3rd clutch, 3rd Pressure Switch(OP3SW) becomes 
+turning on (short to GND).<br>
+When 3rd clutch does not have the hydraulic pressure supply, 3rd Pressure Switch(OP3SW) is 
+turned off (open).<br>
+The signal of 3rd clutch pressure switch is input to the PCM/TCM, and used to reduce the 
+shock which occurs when shifting to 3rd.</p>
+<p>
+<img class="lazy" data-original="../Images/4R_EAT_LHSW_PACKET_and_so_on.gif" border="0" width="350" height="350">
+</p>
+<p>A: Signal<br>
+B: Input Circuit<br>
+C: PCM/TCM<br>
+D: 3rd Pressure switch</p>
+
+<p class="mnemonic">4R_CANEAT_SUPP</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Upshift Switch (ST)<br>
+(ON/OFF)</p>
+<p>The state of the upshift switch on the steering wheel is indicated in UPSHIFT SWITCH 
+(ST) by ON or OFF.<br>
+When the upshift switch is pressed, UPSHIFT SWITCH (ST) indicates ON.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_SUPP_and_SDNP.gif" width="267" height="300"></p>
+<p>A: STEERING WHEEL DOWNSHIFT (-) SWITCH<br>
+B: STEERING WHEEL UPSHIFT (+) SWITCH</p>
+
+<p class="mnemonic">4R_CANEAT_SDNP</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Downshift Switch (ST)<br>
+(ON/OFF)</p>
+<p>The state of the downshift switch on the steering wheel is indicated in DOWNSHIFT 
+SWITCH (ST) as ON or OFF.<br>
+When the downshift switch is pressed, DOWNSHIFT SWITCH (ST) indicates ON.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_SUPP_and_SDNP.gif" width="267" height="300"></p>
+<p>A: STEERING WHEEL DOWNSHIFT (-) SWITCH<br>
+B: STEERING WHEEL UPSHIFT (+) SWITCH</p>
+
+<p class="mnemonic">4R_CANEAT_MIND</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Manual Mode Indicator<br>
+(ON/OFF)</p>
+<p>When the shift lever is shifted to the Manual Mode position, MANUAL MODE INDICATOR 
+indicates ON.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_MIND.gif" width="350" height="250"></p>
+<p>The combination of the positions varies from model to model.<br>
+i: Sequential mode indicator<br>
+ii: Manual mode indicator</p>
+
+<p class="mnemonic">4R_CANEAT_LEDA</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>LED A: Shift Indicator Light Control data<br>
+(ON/OFF)</p>
+<p>When the A/T gear position is 4th and 5th, in the sequential mode, LED A indicates ON.<br>
+LEDA, LEDB, and LEDC are the data to display the number to the shift position indicator at 
+the sequential (manual) mode.<br>
+LEDA is data of the binary number of the third digit.<br>
+LEDB is data of the binary number of the second digit.<br>
+LEDC is data of the binary number of the first digit.</p>
+<table border="1" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111">
+<tr><th>A</th><th>Binary</th><th>LEDA</th><th>LEDB</th><th>LEDC</th></tr>
+<tr><td>B</td><td>0</td><td>0(OFF)</td><td>0(OFF)</td><td>0(OFF)</td></tr>
+<tr><td>1</td><td>1</td><td>0(OFF)</td><td>0(OFF)</td><td>1(ON)</td></tr>
+<tr><td>2</td><td>10</td><td>0(OFF)</td><td>1(ON)</td><td>0(OFF)</td></tr>
+<tr><td>3</td><td>11</td><td>0(OFF)</td><td>1(ON)</td><td>1(ON)</td></tr>
+<tr><td>4</td><td>100</td><td>1(ON)</td><td>0(OFF)</td><td>0(OFF)</td></tr>
+<tr><td>5</td><td>101</td><td>1(ON)</td><td>0(OFF)</td><td>1(ON)</td></tr>
+</table>
+<p>A: Decimal (The number displayed to shift position indicator)<br>
+B: No indicator (Non-sequential mode)</p>
+
+<p class="mnemonic">4R_CANEAT_LEDB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>LED B: Shift Indicator Light Control data<br>
+(ON/OFF)</p>
+<p>When the A/T gear position is 2nd and 3rd, in the sequential mode, LED B indicates ON.<br>
+LEDA, LEDB, and LEDC are the data to display the number to the shift position indicator at 
+the sequential (manual) mode.<br>
+LEDA is data of the binary number of the third digit.<br>
+LEDB is data of the binary number of the second digit.<br>
+LEDC is data of the binary number of the first digit.</p>
+<table border="1" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111">
+<tr><th>A</th><th>Binary</th><th>LEDA</th><th>LEDB</th><th>LEDC</th></tr>
+<tr><td>B</td><td>0</td><td>0(OFF)</td><td>0(OFF)</td><td>0(OFF)</td></tr>
+<tr><td>1</td><td>1</td><td>0(OFF)</td><td>0(OFF)</td><td>1(ON)</td></tr>
+<tr><td>2</td><td>10</td><td>0(OFF)</td><td>1(ON)</td><td>0(OFF)</td></tr>
+<tr><td>3</td><td>11</td><td>0(OFF)</td><td>1(ON)</td><td>1(ON)</td></tr>
+<tr><td>4</td><td>100</td><td>1(ON)</td><td>0(OFF)</td><td>0(OFF)</td></tr>
+<tr><td>5</td><td>101</td><td>1(ON)</td><td>0(OFF)</td><td>1(ON)</td></tr>
+</table>
+<p>A: Decimal (The number displayed to shift position indicator)<br>
+B: No indicator (Non-sequential mode)</p>
+
+<p class="mnemonic">4R_CANEAT_LEDC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>LED C: Shift Indicator Light Control data<br>
+(ON/OFF)</p>
+<p>When the A/T gear position is 1st,3rd and 5th, in the sequential mode, LED C indicates 
+ON.<br>
+LEDA, LEDB, and LEDC are the data to display the number to the shift position indicator at 
+the sequential (manual) mode.<br>
+LEDA is data of the binary number of the third digit.<br>
+LEDB is data of the binary number of the second digit.<br>
+LEDC is data of the binary number of the first digit.</p>
+<table border="1" cellspacing="1" style="border-collapse: collapse" bordercolor="#111111">
+<tr><th>A</th><th>Binary</th><th>LEDA</th><th>LEDB</th><th>LEDC</th></tr>
+<tr><td>B</td><td>0</td><td>0(OFF)</td><td>0(OFF)</td><td>0(OFF)</td></tr>
+<tr><td>1</td><td>1</td><td>0(OFF)</td><td>0(OFF)</td><td>1(ON)</td></tr>
+<tr><td>2</td><td>10</td><td>0(OFF)</td><td>1(ON)</td><td>0(OFF)</td></tr>
+<tr><td>3</td><td>11</td><td>0(OFF)</td><td>1(ON)</td><td>1(ON)</td></tr>
+<tr><td>4</td><td>100</td><td>1(ON)</td><td>0(OFF)</td><td>0(OFF)</td></tr>
+<tr><td>5</td><td>101</td><td>1(ON)</td><td>0(OFF)</td><td>1(ON)</td></tr>
+</table>
+<p>A: Decimal (The number displayed to shift position indicator)<br>
+B: No indicator (Non-sequential mode)</p>
+
+<p class="mnemonic">4R_CANEAT_SCS</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>SCS: Service Check Signal<br>
+(OPEN/SHORT)</p>
+<p>When the SCS line is grounded, the Service Check Signal indicates SHORT.<br>
+After turning on the ignition switch, the indicator light blinks the DTCs.</p>
+
+<p class="mnemonic">4R_CANEAT_BRKSW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Brake Switch: Brake Pedal Position Switch<br>
+(ON/OFF)</p>
+<p>When the brake pedal is pressed, the Brake Pedal Position Switch indicates ON.<br>
+This sensor detects the operation status of the brake pedal.<br>
+The brake lamp switch voltage is used for signal.<br>
+When the brake pedal is not operated, the BKSW terminal does not output the voltage.<br>
+When the brake pedal is depressed, the switch turns ON, and the brake lamp illuminates.<br>
+As a result, the battery voltage is applied to the BKSW terminal, and BKSW terminal 
+outputs the voltage.<br>
+When the voltage from this terminal is ON, the PCM/TCM detects the brake pedal operation.</p>
+<p><img border="0" class="lazy" data-original="../Images/4R_EAT_BKSW.gif" width="350" height="350"></p>
+<p>i: IG<br>
+ii: Brake switch<br>
+iii: Brake light<br>
+iv: Oil pressure switch<br>
+v: PSW<br>
+vi: BKSW<br>
+vii: ECU<br>
+viii: Reference voltage circuit</p>
+
+<p class="mnemonic">4R_CANEAT_DMAX</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Highest D Position</p>
+<p>When the shift lever is shifted to the highest &quot;D&quot; position (D or D4 or D5, the Highest 
+D Position indicates ON.</p>
+
+<p class="mnemonic">4R_CANEAT_OPCV_LOK</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Learning status of Valve Body Characteristic Learning<br>
+(Other/Learned)</p>
+<p>It indicates whether " Valve Body Characteristic Learning" for 8DCT is completed or not.<br>
+</p>
+
+<p class="mnemonic">4R_CANEAT_DFTMON</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>DFT MONITOR: Dynamic Function Test Status Monitor<br>
+($XX)</p>
+<p>The state of the Linear sol test is displayed as a hex value.</p>
+<p>DFT Test Mode Indicator:<br>
+$00:Normal<br>
+$01:Under Test operation<br>
+$04:Completed<br>
+$0E:Test aborted (PGM-TESTER command)<br>
+$0F:Test aborted (Wrong condition)</p>
+
+<p class="mnemonic">4R_CANEAT_DFTRLT</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>DFT Result<br>
+($XX)</p>
+<p>The result of the Linear sol test is displayed as a hex value.</p>
+<p>DFT test result code:<br>
+$00:Normal<br>
+$02:Solenoid malfunction<br>
+$20:3rd gear oil pressure switch malfunction<br>
+$30:4rd gear oil pressure switch malfunction condition</p>
+
+<p class="mnemonic">4R_CANEAT_DISTCRDVB</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>Distance Traveled Since Battery Connected<br>
+(km) (Mile)</p>
+<p>Distance Traveled since the last time battery power was applied to the PCM/TCM.<br>
+When the battery terminal is disconnected, Distance Traveled Since Battery Connected 
+becomes 0.</p>
+
+<p class="mnemonic">4R_CANEAT_ICMDLC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T LC Sol VLV Command<br>
+(mA)</p>
+<p><br>
+A/T LC Sol VLV Command current value relate to the Lock-up clutch pressure control.<br>
+
+<p class="mnemonic">4R_CANEAT_IACTLC</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>A/T LC Sol VLV Actual<br>
+(mA)</p>
+<p><br>
+A/T LC Sol VLV Actual current value relate to the Lock-up clutch pressure control.<br>
+
+<p class="mnemonic">4R_CANDCT_E50A_INV</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"Invalid Judgement"<br>
+(Times)</p>
+<p>It indicates "Invalid Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50A_REF</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"Refrence Search Judgement"<br>
+(Times)</p>
+<p>It indicates "Refrence Search Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_LOW</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"Low Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "Low Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_2ND</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"2nd Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "2nd Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_3RD</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"3rd Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "3rd Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_4TH</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"4th Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "4th Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_5TH</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"5th Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "5th Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_6TH</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"6th Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "6th Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+<p class="mnemonic">4R_CANDCT_E50B_7TH</p>
+<h3>PARAMETER SPECIFICATION</h3>
+<p><br>
+</p>
+<p>"7th Retry Judgement"<br>
+(Times)</p>
+<p>It indicates "7th Retry Judgement".(Times)</p>
+<p>This Parameter is only for following Vehicle (Japan Market ONLY)</p>
+<p>-14M FIT HYBRID</p>
+<p>-14M VEZEL HYBRID</p>
+
+</body>
+</html>

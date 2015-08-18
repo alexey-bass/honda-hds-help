@@ -6,9 +6,12 @@ $(function() {
 
     $('p.mnemonic').each(function(i, mnemonic) {
         mnemonic = $(mnemonic);
-        offset = mnemonic.offset(),
-		p = $(mnemonic.next().next()[0]),
-		t = $.trim(p.text()).split("\n"),
+        offset = mnemonic.offset();
+		p = mnemonic.next().next();
+		while (p.text().length < 2) {
+			p = p.next();
+		}
+		t = $.trim(p.text()).split("\n");
 		m = t[0].match(/([^:]+)/);
 		// 0: param name
 		// 1: top offset
