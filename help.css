@@ -1,0 +1,8 @@
+body { margin-left: 350px; }
+
+#toc { position: absolute; top: 0; left: -50px; font-size: 9pt; }
+#toc ul li { color: blue; cursor: pointer; }
+#toc ul li:hover { text-decoration: underline; }
+
+.goto-top { float: left; color: blue; cursor: pointer; }
+.goto-top:hover { text-decoration: underline; }
