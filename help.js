@@ -36,6 +36,6 @@ $(function () {
     }
     html += '</ul>';
     $('body').prepend('<div id="toc">' + html + '</div>');
-    
+
     $('p.mnemonic').append('<span class="goto-top" onclick="$(\'body\').scrollTop(0);">Back to top</span>')
 });
